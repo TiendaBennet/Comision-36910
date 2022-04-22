@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head rel="icono logo" href="imagenes/logo.png">>
+    <title>Mi Cuenta</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+    
+header{   
+     overflow: hidden;
+ }
+#top-header{       
+         text-align: center;
+         height: 100px;
+     } 
+#logo{
+    float: left;
+    padding: none; /*relleno*/ 
+    margin: none;
+    height: 60px;
+    width: 30%;
+} 
+#logo img{
+    margin-left: 15px;
+    width: 60%;
+    float: left;
+    padding: 10px 10px;
+} 
+#menu{
+	float: right;
+	width: 70%;
+	height: 100%;
+	margin: none;
+}
+	
+#menu ul{
+    font-size: 11px;
+	text-align: center;
+	float: right;
+	margin: none;
+    padding: 25px 5px 0px 0px;
+	background: #ffffff;
+}
+	
+#menu li{
+	display: inline-block;
+	padding: none;
+	margin: none;
+}	
+#menu li a, #menu li span{
+	display: inline-block;
+	padding: 0em 1.5em;
+	text-decoration: none;
+	font-weight: 600;
+	text-transform: uppercase;
+	line-height: 60px;
+}	
+#menu li a{
+	color: #6c7c69;
+}
+#menu li:hover a, #menu li span{
+	background: #FFF;
+	color: #6c7c69;
+	border-left: 1px solid #6c7c69;
+	text-decoration: none;
+}
+/*
+a:hover { background: yellow; } */ /* El usuario esta sobre el enlace */
+/*
+a:active { color: lime; }  */      /* Enlaces activos */
+
+/*****************************/
+
+
+html, body{
+    height: 100%;
+}
+     
+body{
+    margin: 0px;
+    padding: 0px;
+    background: #FFFFFF;
+    font-family: 'Roboto';
+}     
+p, ol, ul{
+    margin-top: 0;
+}
+ 
+p {
+    line-height: 180%;
+}
+ 
+ol, ul{
+    padding: 0;
+    list-style: none;
+}    
+.bloque3{ 
+    padding-left: 150px;  
+    margin: 0px auto;
+    width: 900px;
+    text-align: center;
+}
+/*****************************/
+
+#header-image-menu{
+    top: 10px;
+    position: relative;
+    display: inline-block;
+    border: inset 0.5px #6c7c69 ;
+    margin: 5px 150px 12px 150px;
+    padding: 10px 5px 10px 5px;
+    background-color: #6c7c69;
+}
+#header-image-menu img{
+    width: 55%;
+    float: right;
+    margin: 20px;
+    padding: none;
+}
+#image-text, #image-text1  {
+    display: block;
+}
+#image-text {
+	position: absolute;
+	top: 30%;
+	left: 14%;
+	font-family: 'Roboto';
+	color: #ffffff;
+    font-size: 40px;
+	transform: translate(-30%, -30%);
+	text-align: left;
+}
+#image-text1 {
+    position: absolute;
+	top: 60%;
+	left: 11%;
+	font-family: 'Roboto';
+	color: #ffffff;
+    font-size: 20px;
+	transform: translate(-40%, -30%);
+	text-align: left;
+}
+#header-image-menu2 img{
+    width: 30%;
+    float: center;
+    margin: 20px;
+    padding: none;
+    transform: translate(130%, -40%);
+
+}
+
+.Formulario {
+    display: inline-block;
+    background-color: #6c7c697e;
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <!-- TOP HEADER MENU -->
+        <div id="top-header">
+             
+            <!-- LOGO -->
+            <div id="logo">
+                <img src="imagenes/logo.png" />
+            </div>   
+                     
+            <!-- MENU DE NAVEGACION -->
+            <nav>
+                <div id="menu">    
+                    <ul>
+                    <li class="active"><a href="https://tiendabennet.com.ar/categoria-producto/aberturas/">Aberturas</a></li>
+                    <li class="active"><a href="https://tiendabennet.com.ar/categoria-producto/eco-deck/">Madera Plastica WPC</a></li>
+                    <li class="active"><a href="https://tiendabennet.com.ar/categoria-producto/deco-jardin/">Jardin y Exteriores</a></li>
+                    <li class="active"><a href="https://tiendabennet.com.ar/categoria-producto/revestimiento-piedras/">Piedras</a></li>
+                    <li class="active"><a href="https://tiendabennet.com.ar/categoria-producto/tabique-modular/">Tablones</a></li>
+                    <li class="active"><a href="https://tiendabennet.com.ar/categoria-producto/construccion/">Revestimientos PVC</a></li>
+                    <li class="active"><a href="micuenta.html">Mi Cuenta</a></li>
+                    <li class="active"><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>    
+            </nav>
+        </div>
+        <br>
+        <br> 
+        <hr>
+    </header>
+    <section class="Formulario">
+        <form action="Registrado">
+            <div>
+        <label for="Registrado__nombre">
+            <span>Nombre de usuario o correo electrónico </span>
+            <input type="text" id="nombre" placeholder="Tu nombre">
+        </label>
+    </div>
+    <div>
+        <label for="Registrado__contraseña">
+            <span>Contraseña </span>
+            <input type="contraseña" id="contraseña">
+        </label>
+    </div>
+    </form>
+    <br>
+    <form action="SinRegistrar">
+        <label for="SinRegistrar__nombre">
+            <span>Nombre de usuario </span>
+            <input type="texto" id="nombre" placeholder="Tu nombre">
+        </label>
+        <label for="SinRegistrar__direccion">
+            <span>Dirección de correo electrónico *
+            </span>
+            <input type="texto" id="nombre" placeholder="Tu Correo">
+        </label>
+        <label for="SinRegistrar__contraseña">
+            <span>Contraseña </span>
+            <input type="contraseña" id="contraseña">
+        </label>
+        <label>
+            <p>Tus datos personales se utilizarán para procesar tu pedido, mejorar tu experiencia en esta web, gestionar el acceso a tu cuenta y otros propósitos descritos en nuestra <a href="politica-de-privacidad.html">política de privacidad.</a>
+                </p>
+        </label>
+    </form>
+</section>
+
+
+</body>
