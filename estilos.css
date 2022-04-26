@@ -76,13 +76,17 @@ float: left;
     margin-left: 15px;
     width: 60%;
     float: left;
-    padding: 0px 10px;
+    padding: 0px 10px;  
 } 
+#logo img:hover{
+    transform: scale(1.1,1.1);
+}
 #menu{
 	float: right;
 	width: 70%;
 	height: 100%;
 	margin: none;
+    transition: width 3s, height 4s;
 }
 	
 #menu ul{
@@ -115,6 +119,9 @@ float: left;
 	color: #6c7c69;
 	border-left: 1px solid #6c7c69;
 	text-decoration: none;
+}
+#menu li:hover{
+    transform: scale(1.5,1.5);
 }
 /*
 a:hover { background: yellow; } */ /* El usuario esta sobre el enlace */
@@ -310,7 +317,44 @@ bloque3{
   
     column-gap: 2rem;
     row-gap: 1rem; /* Separar filas columnas*/
+    
 }
+
+/* TRANSITION MODELOS */
+#imageboxgrid{
+    transition-timing-function: ease-in-out;
+    transition: width 3s;
+    transition-delay: 1s;
+}
+.modelos-grid--fresno:hover {
+    width: 300px;
+  }
+.modelos-grid--blanco:hover {
+    width: 300px;
+  }  
+.modelos-grid--grafito:hover {
+    width: 300px;
+  }
+.modelos-grid--haya:hover {
+    width: 300px;
+  }
+.modelos-grid--madera:hover {
+    width: 300px;
+  }
+.modelos-grid--marfil:hover {
+    width: 300px;
+  }
+.modelos-grid--mina:hover {
+    width: 300px;
+  }
+.modelos-grid--nogal:hover {
+    width: 300px;
+  }
+  .modelos-grid--vintage:hover {
+    width: 300px;
+  }
+/* FIN TRANSITION MODELOS */
+
 
 .modelos-grid__hijo{
     text-align: center;
@@ -319,8 +363,8 @@ bloque3{
     align-items: center;
     padding: 2px;
     background-size: 180px;
-
 }
+
 #image-grid{
     display: inline-block;
 	border: 1px solid rgba(0, 0, 0, .5);
@@ -344,9 +388,9 @@ bloque3{
     height: 170px;
     grid-area: fre;
     background-image: url("imagenes/fresno.jpg");
-    
     border-radius: 5px;
     border: solid 1px rgba(0, 0, 0, .5);
+    transition-timing-function: linear;
 }
 .modelos-grid--madera{
     width: 170px;
@@ -412,3 +456,28 @@ bloque3{
     border-radius: 5px;
     border: solid 1px rgba(0, 0, 0, .5);
 }
+
+
+
+
+
+
+
+
+/*Media Querys*/
+
+/*Se colocan al final de los estilos*/
+/*Desktop first -> max. width*/
+/*Debemos usar el @media { ... } */
+
+/* A las vistas menores de 1024 px */
+@media screen and (max-width: 1024px) {
+    .body {
+            background-color: #000000;
+      }
+
+/* A las vistas menores de 600 px */
+@media screen and (max-width: 600px) {
+    .body {
+            background-color: #000000;
+          }
