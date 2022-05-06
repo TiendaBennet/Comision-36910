@@ -216,7 +216,19 @@ bloque3{
     margin: 20px;
     padding: none;
     transform: translate(130%, -40%);
-
+/*ANIMACION TOMATE*/
+    position: relative;
+    animation-name: tomate;
+    animation-timing-function: linear;
+    animation-duration: 15s;
+    animation-direction: normal; 
+}
+@keyframes tomate{
+  0%   {background-color:none; left:0px; top:0px;}
+  25%  {background-color:none; left:200px; top:0px;}
+  50%  {background-color:none; left:200px; top:0px;}
+  75%  {background-color:none; left:200px; top:0px;}
+  100% {background-color:none; left:200px; top:0px;}
 }
 /* FIN MENU NAV */
 
@@ -364,7 +376,7 @@ bloque3{
 .modelos-grid__hijo{
     text-align: center;
     display: flex;
-    justify-content: center;
+    justify-content: stretch;
     align-items: center;
     padding: 2px;
     background-size: 180px;
@@ -504,11 +516,214 @@ bloque3{
     justify-content: center;
     padding-top: 10px;
 }
+    #header-image-menu{
+    top: 5px;
+    width: 100%;
+    height: 400px;
+    margin: 5px 5px 12px 45px;
+    display: block;
+}
+#header-image-menu2 img{
+    width: 30%;
+    float: center;
+    margin: 20px;
+    padding: none;
+    transform: none;
+}    
 
-    
+#image-text {
+    font-size: 100%;
+	position: initial;
+	top: none;
+	left: none;
+	transform: none;
+	text-align: none;
+}
+#image-text1 {
+    font-size: 100%;
+	position: initial;
+	top: none;
+	left: none;
+	transform: none;
+	text-align: none;
+
+
+}
 /*USAR OVERFLOW, CON SCROLL Y O X */
 
+#titulo-modelos{
+    font-size: 30px;
+}
 
+.modelos-grid{
+    width: 100%;
+    height: auto;
+    display: grid; /* Propiedad obligatoria para usar CSS grids*/
+    align-content:center;
+    justify-content: center;
+    border: 1px solid #6c7c69;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    min-height: 200px; 
+	font-family: 'Roboto';
+    color: #FFFFFF;
+    grid-template-columns:  1fr ; /*dibujar primero las columnas de la cuadricula */ /* Es lo mismo poner: repeat (4, 1fr)*/
+    grid-template-rows: repeat(11, 1fr);
+    grid-template-areas:    
+        "Mod" 
+        "titulo"
+        "fre" 
+        "mad" 
+        "gra"
+        "hay" 
+        "vin" 
+        "nog"
+        "min" 
+        "bl" 
+        "mar";
+
+  
+    column-gap: 0.5rem;
+    row-gap: 1rem; /* Separar filas columnas*/
+    
+}
+
+.modelos-grid__hijo{
+    max-height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#image-grid{
+    display: inline-block;
+	border: none;
+	border-radius: none;
+}
+
+.modelos-grid--titulo{
+    grid-area: titulo;
+}
+
+.modelos-grid--modelos{
+    max-height: 100px;
+    padding-top: none;
+    background-color: #6c7c69;
+    color: #FFFFFF;
+    grid-area: Mod;
+    justify-self: start;
+    display: block;
+}
+.modelos-grid--fresno{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    height: auto;
+    grid-area: fre;
+    background-image: url("imagenes/fresno.jpg");
+    border: none;
+	border-radius: 0px;
+    transition-timing-function: none;
+    justify-items:auto;
+}
+.modelos-grid--madera{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    height: auto;
+    transition-timing-function: none;
+    grid-area: mad;
+    background-image: url("imagenes/madera.jpg");
+    border: none;
+	border-radius: 0px;
+}
+.modelos-grid--grafito{
+    grid-area: gra;
+    background-image: url("imagenes/grafito.jpg");
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    height: auto;
+    transition-timing-function: none;
+    border: none;
+	border-radius: 0px;
+}
+.modelos-grid--haya{
+    grid-area: hay;
+    background-image: url("imagenes/haya.jpg");
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    height: auto;
+    transition-timing-function: none;
+    border: none;
+	border-radius: 0px;
+}
+.modelos-grid--vintage{
+    grid-area: vin;
+    background-image: url("imagenes/vintage.jpg");
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    height: auto;
+    transition-timing-function: none;
+    border: none;
+	border-radius: 0px;
+}
+.modelos-grid--nogal{
+    grid-area: nog;
+    background-image: url("imagenes/nogal.jpg");
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    height: auto;
+    transition-timing-function: none;
+    border: none;
+	border-radius: 0px;
+}
+.modelos-grid--mina{
+    grid-area: min;
+    background-image: url("imagenes/mina.jpg");
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    height: auto;
+    transition-timing-function: none;
+    border: none;
+	border-radius: 0px;
+}
+.modelos-grid--blanco{
+    grid-area: bl;
+    background-image: url("imagenes/fresno.jpg");
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    height: auto;
+    transition-timing-function: none;
+    border: none;
+	border-radius: 0px;
+}
+.modelos-grid--marfil{
+    grid-area: mar;
+    background-image: url("imagenes/marfil.jpg");
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    height: auto;
+    transition-timing-function: none;
+    border: none;
+	border-radius: 0px;
+}
+
+#video{ 
+    width: 100%;
+    height: auto;
+}
 
 
 /*La ultima media sobreescribe la anterior*/
