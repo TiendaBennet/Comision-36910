@@ -1,0 +1,97 @@
+$colorprincipal: #6c7c69;
+$hover-color : #58b6e6;
+$bodyFont: sans-serif;
+$fontWeight: 400;
+$transition:all .5s;
+
+/*---------------------------------------
+.footer-area
+---------------------------------------*/
+.footer-area{
+    background:#6c7c69;
+    .footer-top{
+        padding: 39px 10px 6px 10px;
+        .single-widgets{
+            margin-top: 30px;
+            .widgets-title{
+                h4{
+                    font-size: 15px;
+                    font-weight: 400;
+                    color:#404040;
+                    text-transform: capitalize;
+                    margin-bottom: 15px;
+                }
+            }
+            .widgets-text{
+                ul{
+                    margin: 0;
+                    padding:0;
+                    list-style:none;
+                    li{
+                        display:block;
+                        a{
+                            display: block;
+                            font-size: 16px;
+                            line-height: 36px;
+                            color:#FFFFFF;
+                            text-transform: capitalize;
+                            @include transition($transition);
+                            &:hover{
+                                color:$hover-color;
+                            }
+                        }
+                        button{
+                            background-color: #94C7DD;
+                            color:#FFFFFF;
+                            border-color: #6c7c69; 
+                    }
+                    }
+                }
+            }
+        }
+
+    }
+    .footer-bottom{
+        padding: 30px 0;
+        .copyright-area{
+            p{
+                margin-bottom: 0px;
+                font-size: 16px;
+                color: #FFFFFF; 
+                span{
+                    color: #dadee0; 
+                }
+            }
+        }
+        .social-media{
+            ul{
+                margin:0;
+                padding: 0;
+                list-style: none;
+                li{
+                    display: inline-block;
+                    a{
+                        display: block;
+                        width:35px;
+                        height: 35px;
+                        line-height: 35px;
+                        text-align: center;
+                        @include border-radius(50%);
+                        background: #acadaf;
+                        color: #FFFFFF;
+                        @include transition($transition);
+                        &:hover{
+                            color:#FFFFFF;
+                            background: #58b6e6; 
+                        
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*---------------------------------------
+.footer-area
+---------------------------------------*/
