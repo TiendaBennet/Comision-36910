@@ -1,0 +1,396 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento es decir versión HTML5 -->
+<html lang="en"> <!-- Inicio del documento -->
+<head>
+    <title>Revestimientos Texturados</title> <!-- se ve reflejado en la pestña del navegador -->
+    <meta charset="UTF-8"> <!-- Permitir caracteres especiales entre otros -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidad con Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adaptarse al ancho del dispositivo, Pc, tablet, escritorio -->
+    <!--La width=device-widthparte establece el ancho de la página para seguir el ancho de pantalla del dispositivo (que variará según el dispositivo).
+    La initial-scale=1.0parte establece el nivel de zoom inicial cuando el navegador carga la página por primera vez.-->
+    
+    <!-- El navegador no entiende SCSS, si lo dejas puesto, cuando abras la pestaña lo vas a ver roto, se debe dejar el CSS -->
+    <link rel="stylesheet" href="./Estilos/bootstrap/bootstrap.min.css" > 
+    
+    <link rel="stylesheet" href="./Estilos/estilos.css" ><!--Siempre colocar el href css último, para poder pisar a los anteriores-->
+    <link rel="stylesheet" href="./Estilos/css/responsive.css" >
+
+    <!-- Font Awsome 354 Icon -->
+    <script src="https://kit.fontawesome.com/420772965a.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+<!-- COMIENZA HEADER AREA -->
+<header class="header">
+    <ul class="header-left-list"> 
+        <li class="header-left-items"><img src="./Estilos/imagenes/logo-whatsapp.svg" width="15px" height="15px"></li>              
+        <li class="header-left-items">
+            <a class="nav-enlace" href="https://api.whatsapp.com/send?phone=541123902811&amp;text=Hola mi nombre es " target="_blank"> 
+                Venta Telefónica (+54) 11-2390-2811 | Lun a Vie 9 a 17hs, Sáb 10 a 14hs</a></li>
+        <li class="header-left-items"><img src="./Estilos/imagenes/mail-outline.svg" width="15px" height="15px"></li>        
+        <li class="header-left-items"><a class="nav-enlace" title="mail" href="infomail" target="_blank">info@tiendabennet.com.ar</a><!-- Crear HTML --> </li>       
+    </ul>
+    <ul class="header-right-list"> 
+        <li class="header-right-items">                
+            <a href="https://www.instagram.com/tiendabennet/?hl=es" target="_blank">
+                <img src="./Estilos/imagenes/logo-instagram.svg" width="20px" height="20px"></a>
+        </li>
+        <li class="header-right-items">                
+            <a href="https://www.facebook.com/tiendabennet/?notif_id=1647608054533360&notif_t=page_user_activity&ref=notif" target="_blank">
+                <img src="./Estilos/imagenes/logo-facebook.svg"  width="20px" height="20px"></a>
+        </li>
+        <li class="header-right-items">                
+            <a href="https://ar.pinterest.com/tiendabennet/_created/" target="_blank">
+                <img src="./Estilos/imagenes/logo-pinterest.svg"  width="20px" height="20px"></a>
+        </li>
+        <li class="header-right-items">                
+            <a href="https://www.youtube.com/channel/UCAFWDm0LPlKF0bkAngIM5nA" target="_blank">
+                <img src="./Estilos/imagenes/logo-youtube.svg"  width="20px" height="20px"></a>
+        </li>
+    </ul>
+</header>
+<!-- COMIENZA HEADER AREA -->
+
+<!-- CUIDADO, si el header es un bloque, no hace falta poner un bloque sobre otro bloque, ahi es linea, no podes poner div, luego 2 divs y luego otros 4 divs para cada div anterior -->
+<!-- DIV agrupa una parte generica de info o contenido. 
+Como es de bloque, si no colocas nada dentro, te genera un bloque sin espacios directaemente -->
+
+<!-- ************************************************************************* -->
+
+<!-- COMIENZA MENU DE NAVECACIÓN -->         
+<nav>
+    <div id="top-nav">             
+        <div class="logo-effect" id="logo">
+          <img src="Estilos/imagenes/logo.png"/>
+         </div>   
+     <nav>
+        <div id="menu">    
+            <ul>
+                <li class="active"><a href="https://tiendabennet.com.ar/categoria-producto/aberturas/" target="_blank">Aberturas</a></li>
+                <li class="active"><a href="https://tiendabennet.com.ar/categoria-producto/eco-deck/" target="_blank">Madera Plastica WPC</a></li>
+                <li class="active"><a href="https://tiendabennet.com.ar/categoria-producto/deco-jardin/" target="_blank">Jardin y Exteriores</a></li>                    
+                <li class="active"><a href="piedras.html" target="_blank">Piedras</a></li>
+                <li class="active"><a href="https://tiendabennet.com.ar/categoria-producto/tabique-modular/" target="_blank">Tablones</a></li>
+                <li class="active"><a href="index.html" target="_blank">Revestimientos PVC</a></li>
+                <li class="active"><a href="contacto.html" target="_blank">Contacto</a></li>
+                <li class="active"><a href="blog.html" target="_blank">Blog</a></li>
+            </ul>
+        </div>    
+    </nav>
+    <i class="header-icono fas fa-bars"></i>   
+    </div>
+</nav>
+<!-- Section 1 - Título con 2 imágenes -->  
+<section class="imagen-con-titulo">    
+    <div id="Section1">
+        <div>    
+        <h2 id = "image-text">
+                Revestimientos Elegantes 
+                <br>
+                Para Cualquier Pared, 
+                <br>
+                Espacio Y Estilo.
+                <br> 
+            </h2>
+            <h3 id = "image-text1">
+                Tablas de PVC antihumedad, 
+                <br>
+                sin costo de mantenimiento.
+            </h3>
+        </div>
+            <img src="./Estilos/imagenes/banner.JPG">
+        </div>
+        <div id="Section1-b">
+        <img src="./Estilos/imagenes/banner1.jpg">
+            </div>
+    <div class="banner-btn">
+        <a href="index.html" class="primary-btn">Más Información</a>
+    </div>
+</section>
+<!-- COMIENZA MENU DE NAVECACIÓN -->         
+<!-- PRESENTACION MODELOS - SECCION 1-->
+
+
+<section class="modelos">
+    <div class="modelos-grid">
+        <div class="modelos-grid__hijo modelos-grid--titulo"><h2 id="titulo-modelos">Modelos</h2> 
+        </div>
+        <div class="modelos-grid__hijo modelos-grid--modelos">
+            <h2>Revestimiento Texturado</h2><br>
+            <h4>Contamos con 9 modelos de texturados. Salen directo de fábrica y se preparan por encargue. Las tablas texturadas son de 25 cm de ancho y el largo puede ir de 2 a 6 metros lineales.</h4>
+            <br>
+            <a href="blog.html" class="primary-btn">¡Arender más!</a>       
+        </div>
+        <div class="modelos-grid__hijo modelos-grid--fresno" id="imageboxgrid">
+            <h3>Fresno</h3>
+        </div>
+        <div class="modelos-grid__hijo modelos-grid--madera" id="imageboxgrid">
+            <h3>Madera</h3>
+        </div>
+        <div class="modelos-grid__hijo modelos-grid--grafito" id="imageboxgrid">
+            <h3>Grafito</h3>
+        </div>
+        <div class="modelos-grid__hijo modelos-grid--haya" id="imageboxgrid">
+            <h3>Haya</h3>
+        </div>
+        <div class="modelos-grid__hijo modelos-grid--vintage" id="imageboxgrid">
+            <h3>Vintage</h3>
+        </div>
+        <div class="modelos-grid__hijo modelos-grid--nogal" id="imageboxgrid">
+            <h3>Nogal</h3>
+        </div>
+        <div class="modelos-grid__hijo modelos-grid--mina" id="imageboxgrid">
+            <h3>Mina</h3>
+        </div>
+        <div class="modelos-grid__hijo modelos-grid--blanco" id="imageboxgrid">
+            <h3>Blanco</h3>
+        </div>
+        <div class="modelos-grid__hijo modelos-grid--marfil" id="imageboxgrid">
+            <h3>Marfil</h3>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+		<!-- COMIENZA CARROUSEL TRABAJOS 
+    	<div class="carrousel-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="slide-trabajos owl-carousel">
+							<div class="single-partner">
+								<a href="#"><img src="Estilos/imagenes/carrousel web/1.jpg" alt="trabajos"></a>
+							</div>
+							<div class="single-partner">
+								<a href="#"><img src="Estilos/imagenes/carrousel web/2.jpg" alt="trabajos"></a>
+							</div>
+							<div class="single-partner">
+								<a href="#"><img src="Estilos/imagenes/carrousel web/3.jpg" alt="trabajos"></a>
+							</div>
+							<div class="single-partner">
+								<a href="#"><img src="Estilos/imagenes/carrousel web/4.jpg" alt="trabajos"></a>
+							</div>
+							<div class="single-partner">
+								<a href="#"><img src="Estilos/imagenes/carrousel web/5.jpg" alt="trabajos"></a>
+							</div>
+							<div class="single-partner">
+								<a href="#"><img src="Estilos/imagenes/carrousel web/6.jpeg" alt="trabajos"></a>
+							</div>
+							<div class="single-partner">
+								<a href="#"><img src="Estilos/imagenes/carrousel web/7.jpeg" alt="trabajos"></a>
+							</div>
+							<div class="single-partner">
+								<a href="#"><img src="Estilos/imagenes/carrousel web/8.jpeg" alt="trabajos"></a>
+							</div>
+							<div class="single-partner">
+								<a href="#"><img src="Estilos/imagenes/carrousel web/9.jpeg" alt="trabajos"></a>
+							</div>
+							<div class="single-partner">
+								<a href="#"><img src="Estilos/imagenes/carrousel web/10.jpeg" alt="trabajos"></a>
+							</div>
+							<div class="single-partner">
+								<a href="#"><img src="Estilos/imagenes/carrousel web/11.jpeg" alt="trabajos"></a>
+							</div>
+							<div class="single-partner">
+								<a href="#"><img src="Estilos/imagenes/carrousel web/12.jpeg" alt="trabajos"></a>
+							</div>
+							<div class="single-partner">
+								<a href="#"><img src="Estilos/imagenes/carrousel web/13.jpeg" alt="trabajos"></a>
+							</div>
+							<div class="single-partner">
+								<a href="#"><img src="Estilos/imagenes/carrousel web/14.jpeg" alt="trabajos"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		 COMIENZA CARROUSEL TRABAJOS -->
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+         <div class="section section-project">
+            <h2 class="section__title">Project Carousel</h2><small class="section__subtitle">
+               A simple Synchronised carousel by<a href="https://codepen.io/ariona">@ariona_rian</a><br/>using Slick Carousel</small>
+            <div class="project-carousel">
+              <div class="project-strip">
+                <div class="project"><img src="http://unsplash.it/578/360/?image=26&amp;blur" alt=""/></div>
+                <div class="project"><img src="http://unsplash.it/578/360/?image=39&amp;blur" alt=""/></div>
+                <div class="project"><img src="http://unsplash.it/578/360/?image=52&amp;blur" alt=""/></div>
+                <div class="project"><img src="http://unsplash.it/578/360/?image=65&amp;blur" alt=""/></div>
+                <div class="project"><img src="http://unsplash.it/578/360/?image=78&amp;blur" alt=""/></div>
+                <div class="project"><img src="http://unsplash.it/578/360/?image=91&amp;blur" alt=""/></div>
+                <div class="project"><img src="http://unsplash.it/578/360/?image=104&amp;blur" alt=""/></div>
+                <div class="project"><img src="http://unsplash.it/578/360/?image=117&amp;blur" alt=""/></div>
+                <div class="project"><img src="http://unsplash.it/578/360/?image=130&amp;blur" alt=""/></div>
+              </div>
+              <div class="project-screen">
+                <div class="project-detail">
+                  <div class="project"><img src="http://unsplash.it/578/361/?image=26" alt=""/></div>
+                  <div class="project"><img src="http://unsplash.it/578/361/?image=39" alt=""/></div>
+                  <div class="project"><img src="http://unsplash.it/578/361/?image=52" alt=""/></div>
+                  <div class="project"><img src="http://unsplash.it/578/361/?image=65" alt=""/></div>
+                  <div class="project"><img src="http://unsplash.it/578/361/?image=78" alt=""/></div>
+                  <div class="project"><img src="http://unsplash.it/578/361/?image=91" alt=""/></div>
+                  <div class="project"><img src="http://unsplash.it/578/361/?image=104" alt=""/></div>
+                  <div class="project"><img src="http://unsplash.it/578/361/?image=117" alt=""/></div>
+                  <div class="project"><img src="http://unsplash.it/578/361/?image=130" alt=""/></div>
+                </div>
+                <div class="screen-frame"></div>
+              </div>
+            </div>
+          </div>
+
+
+        -->
+
+
+
+
+
+
+
+
+
+
+
+    
+
+<!-- COMIENZA VIDEO AREA -->
+<div class="video-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title text-center">
+                    <h2 class="titulo-video">Instalación Pared</h2>
+                    <p> ¡Ofrecemos Instalaciones! <br> Instaladores con experiencia y trayectoria.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="video">
+                    <iframe width="640" height="360" src="https://www.youtube.com/embed/SrccwyJFQ8M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- COMIENZA VIDEO AREA -->
+<!-- Comienza Footer Area -->
+    <footer class="footer-area">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-widgets">
+                            <div class="widgets-title">
+                                <h4>EMPRESA</h4>
+                            </div>
+                            <div class="widgets-text">
+                                <ul>
+                                    <li><a href="#">Nosotros</a></li>
+                                    <li><a href="#">Compra Mayorista</a></li>
+                                    <li><a href="#">Medios de Envío</a></li>
+                                    <li><a href="#">Forma de Pago</a></li>
+                                    <li><a href="#">Novedades</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-widgets">
+                            <div class="widgets-title">
+                                <h4>ATENCIÓN AL CLIENTE</h4>
+                            </div>
+                            <div class="widgets-text">
+                                <ul>
+                                    <li><a href="#">Contacto</a></li>
+                                    <li><a href="#">Puntos de Retiro</a></li>
+                                    <li><a href="#">Dejanos tu comentario</a></li>
+                                    <li><a href="#">Terminos y Condiciones</a></li>
+                                    <li><a href="#">Políticas de Privacidad</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-widgets">
+                            <div class="widgets-title">
+                                <h4>CONTACTO</h4>
+                            </div>
+                            <div class="widgets-text">
+                                <ul>
+                                    <li><a href="#">+ 54 9 11 64187835</a></li>
+                                    <li><a href="#">Villa del Parque - CABA</a></li>
+                                    <li><a href="#">Seguí tu envío</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-widgets">
+                            <div class="widgets-title">
+                                <h4>REGISTRATE AL NEWSLETTER</h4>
+                            </div>
+                            <div class="widgets-text">
+                                <ul>
+                                    <li><input type="text" class="form-control" id="name" name="name"  placeholder="Your Name"></li>
+                                    <li><a href="#"><input type="email" class="form-control" id="email" name="email"  placeholder="Your Email "></a></li>
+                                    <li><button type="submit" class="send-btn">Suscribirme</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="copyright-area">
+                            <p>BENNET &copy; <span>2020</span>; Todos los derechos reservados.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="social-media text-right">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- Finaliza Footer Area -->
+
+
+
+</body>
+<script src="js/myscript.js"></script>
+</html>

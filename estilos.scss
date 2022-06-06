@@ -1,0 +1,594 @@
+/*
+------------- Información Inicial ----------------
+
+Nompre de la Plantilla Principal del Proyecto: Revestimientos Texturados
+WIREFRAME Y ESTRUCTURA DEL PROYECTO: https://tiendabennet.com.ar/revestimientos-texturados/
+Autor: Juan Stellatelli
+Repositories: https://github.com/TiendaBennet
+
+------------- Contenido Total ----------------
+
+Section 1 - Titulo con 2 imágenes
+Section 2 - Presentación Modelos
+Section 3 - Models Transitions
+Section 4 - Estilos Grid Modelos
+Section 5 - Video Explicativo Revestimientos
+Section 6 - Mi Cuenta - Page Area
+
+/*
+------------------- Elementos Utilizados --------------------------------
+*/
+// variable
+@import "./variable/variables";
+
+// mixin
+@import "./variable/mixin";
+
+// global
+@import "./variable/global";
+
+
+/*Al colocar una medida dentro del max-width se le indica un tope de tamaño de pantalla: entonces todas las propiedades y 
+valores que se declaren dentro de esa media solo se van a ver si están dentro de ese margen de ancho de pantalla, si no no, 
+esa seria la lógica*/
+
+/*---------------------------------------
+.Sobre Json: Es clave anotar sobre su instalación, se hace siempre antes de arrancar con SASS, es el más popular hoy y sirve para el desarrollo y la utilización de SCSS
+---------------------------------------*/
+/*****************************************/
+/*	 Section 0 - etiquetas */
+/*****************************************/
+p, ol, ul {
+    @extend %listas;
+  }
+/*****************************************/
+/*	 Section 1 - Titulo con 2 imágenes */
+/*****************************************/
+#Section1{
+    top: 10px;
+    position: relative;
+    display: inline-block;
+    border: inset 0.5px #6c7c69 ;
+    margin: 5px 150px 12px 150px;
+    padding: 10px 5px 10px 5px;
+    background-color: $colorprincipal;
+    @include box-shadow;
+}
+#Section1 img{
+    width: 55%;
+    float: right;
+    margin: 20px;
+    padding: none;
+}
+#image-text, #image-text1  {
+    display: block;
+}
+#image-text {
+	position: absolute;
+	top: 30%;
+	left: 14%;
+	font-family: 'Roboto';
+	color: nth($list: $colores, $n:1 );
+    font-size: 40px;
+	transform: translate(-30%, -30%);
+	text-align: left;
+}
+#image-text1 {
+    position: absolute;
+	top: 60%;
+	left: 11%;
+	font-family: 'Roboto';
+	color: nth($list: $colores, $n:1 );
+    font-size: 20px;
+	transform: translate(-40%, -30%);
+	text-align: left;
+}
+.banner-btn{
+    .primary-btn{
+        display: inline-block;
+        background:#ffffff;
+        transform: translate(186px, -363px);
+        @include primary-btn;
+        @include transition;
+        &:hover{
+            color: $hover-color;
+    }
+}
+}
+#Section1-b img{
+    width: 30%;
+    float: center;
+    margin: 20px;
+    padding: none;
+    transform: translate(130%, -40%);
+
+}
+/*****************************************/
+/*	 Section 2 - Presentación Modelos */
+/*****************************************/
+#titulo-modelos{
+	font-family: 'Roboto';
+	color: $colorprincipal;
+    font-size: 35px;
+	text-align: center;
+    letter-spacing: 4px;    
+}
+.modelos-grid{
+    display: grid; /* Propiedad obligatoria para usar CSS grids*/
+    border: 1px solid $colorprincipal;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    min-height: 700px; 
+	font-family: 'Roboto';
+    color: nth($list: $colores, $n:1 );
+    grid-template-columns:  1fr 1fr 1fr 1fr ; /*dibujar primero las columnas de la cuadricula */ /* Es lo mismo poner: repeat (4, 1fr)*/
+    grid-template-rows: 1fr 2fr 2fr 2fr;
+    grid-template-areas: 
+        "Mod titulo titulo titulo"
+        "Mod fre mad gra"
+        "Mod hay vin nog"
+        "Mod min bl mar"
+        ;
+    column-gap: 2rem;
+    row-gap: 1rem; /* Separar filas columnas*/  
+    .primary-btn{
+            display: inline-block;
+            background:#ffffff;
+            @include primary-btn;
+            @include transition;
+            &:hover{
+                color: $hover-color;
+        }
+    } 
+}
+/*****************************************/
+/*	 Section 3 - Models Transitions */
+/*****************************************/
+#imageboxgrid{
+    transition-timing-function: ease-in-out;
+    transition: width 3s;
+    transition-delay: 1s;
+}
+.modelos-grid--fresno:hover {
+    width: 300px;
+  }
+.modelos-grid--blanco:hover {
+    width: 300px;
+  }  
+.modelos-grid--grafito:hover {
+    width: 300px;
+  }
+.modelos-grid--haya:hover {
+    width: 300px;
+  }
+.modelos-grid--madera:hover {
+    width: 300px;
+  }
+.modelos-grid--marfil:hover {
+    width: 300px;
+  }
+.modelos-grid--mina:hover {
+    width: 300px;
+  }
+.modelos-grid--nogal:hover {
+    width: 300px;
+  }
+  .modelos-grid--vintage:hover {
+    width: 300px;
+  }
+
+/*****************************************/
+/*	 Section 4 - Estilos Grid Modelos */
+/*****************************************/
+.modelos-grid__hijo{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    background-size: 180px;
+}
+#image-grid{
+    display: inline-block;
+	border: 1px solid rgba(0, 0, 0, .5);
+	border-radius: 5px;
+}
+.modelos-grid--titulo{
+    grid-area: titulo;
+}
+.modelos-grid--modelos{
+    padding-top: 60px;
+    background-color: $colorprincipal;
+    @include box-shadow;
+    color: nth($list: $colores, $n:1 );
+    grid-area: Mod;
+    justify-self: start;
+    display: block;
+}
+.modelos-grid--fresno{
+    grid-area: fre;
+    background-image: url("imagenes/fresno.jpg");
+    transition-timing-function: linear;
+    @include modelos-grid;}
+.modelos-grid--madera{
+    grid-area: mad;
+    background-image: url("imagenes/madera.jpg");
+    @include modelos-grid;
+    transition-timing-function: linear;}
+.modelos-grid--grafito{
+    grid-area: gra;
+    background-image: url("imagenes/grafito.jpg");
+    @include modelos-grid;
+    transition-timing-function: linear;}
+.modelos-grid--haya{
+    grid-area: hay;
+    @include modelos-grid;
+    background-image: url("imagenes/haya.jpg");
+    transition-timing-function: linear;}
+.modelos-grid--vintage{
+    grid-area: vin;
+    @include modelos-grid;
+    background-image: url("imagenes/vintage.jpg");
+    transition-timing-function: linear;}
+.modelos-grid--nogal{
+    grid-area: nog;
+    @include modelos-grid;
+    background-image: url("imagenes/nogal.jpg");
+    transition-timing-function: linear;}
+.modelos-grid--mina{
+    grid-area: min;
+    @include modelos-grid;
+    background-image: url("imagenes/mina.jpg");
+    transition-timing-function: linear;}
+.modelos-grid--blanco{
+    grid-area: bl;
+    @include modelos-grid;
+    background-image: url("imagenes/fresno.jpg");
+    transition-timing-function: linear;}
+.modelos-grid--marfil{
+    grid-area: mar;
+    @include modelos-grid;
+    background-image: url("imagenes/marfil.jpg");
+    transition-timing-function: linear;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import 'https://fonts.googleapis.com/css?family=Josefin+Slab';
+
+
+.section-project{
+	padding: 50px 0;
+	position: relative;
+	background-color: #222;
+}
+
+.section__title, .section__subtitle{
+	text-align: center;
+	color: white;
+	display: block;
+}
+.section__title{
+	font-size: 3em;
+	line-height: 1;
+	margin: 0 0 20px;
+	
+}
+.section__subtitle{
+	font-size: 1.2em;
+	line-height: 1.5;
+	opacity: .5;
+	
+	a{
+		color: inherit
+	}
+}
+
+
+// Project carousel outer wrapper
+.project-carousel{
+	position: relative;
+	padding: 50px 0;
+}
+
+// Project Strip 
+.project-strip{
+	margin: 150px 0 150px;
+	filter: blur(10px);
+	
+	.project{
+		cursor: pointer;
+	}
+	img{
+		max-width: 100%;
+		width: 100%;
+		height: auto;
+
+	}
+}
+
+// Project Details
+.project-screen{
+	width: 768px;
+	height: 451px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	
+	// Project Detail Carousel    
+	.project-detail{
+		position: absolute;
+		left: 0;
+		right: 0;
+		width: 578px;
+		height: 361px;
+		margin: 32px auto 0;
+		z-index: 1;
+		background-color: #333;
+	}
+	
+	// Macbook frame 	
+	.screen-frame{
+		content:" ";
+		width: 768px;
+		height: 451px;
+		position: absolute;
+		background-image: url("https://dl.dropboxusercontent.com/u/26808427/cdn/experiments/training/macbook-frame.png");
+		background-repeat: no-repeat;
+	}
+	
+	// Initial style to stack the slides 	
+	.project{
+		margin-right: -100%;
+		float: left;
+		cursor: move;
+	}
+	
+}
+
+
+/*****************************************/
+/*	 Section 5 - Video Explicativo Revestimientos */
+/*****************************************/
+.video-area{
+    padding-top: 60px;
+    padding-bottom: 30px;
+    .titulo-video{
+        font-family: "Roboto";
+        color: $colorprincipal;
+        font-size: 35px;
+        text-align: center;
+        letter-spacing: 4px;
+    }
+    .video{
+        margin-top: 25px;
+        text-align: center;
+
+    }        
+}
+/*****************************************/
+/*	 Section 6 - Mi Cuenta - Page Area */
+/*****************************************/
+.breadcum-area{
+    margin: 10px 5px 0px 5px;
+    background:$colorprincipal;
+    padding:130px 0 75px 0;
+    background-position:center;
+    background-size:cover;
+    .breadcum-text{
+        h2{
+            font-size: 50px;
+            font-weight: 700;
+            color:#ffffff;
+            text-transform:capitalize;
+            margin-bottom: 32px;
+        }
+        p{
+            font-size:16px;
+            line-height: 28px;
+            color:#ffffff;
+            margin-bottom:0px;
+        }
+    }
+}
+.contact-page-area{
+    padding-top: 50px;
+    padding-bottom: 120px;
+    .contact-form{
+        form{
+            .form-group{
+                margin-bottom: 30px;
+                input{
+                    width: 100%;
+                    height: 60px;
+                    padding-left: 30px;
+                    background: nth($list: $colores, $n:3);
+                    border:none;
+                    box-shadow: none;/*
+                    @include border-radius(5px);*/
+                }
+                textarea{
+                    width: 100%;
+                    height: 320px;
+                    padding: 30px;
+                    background: nth($list: $colores, $n:3);
+                    border:none;
+                    box-shadow: none;
+                    resize:none;/*
+                    @include border-radius(5px);*/
+
+                }
+            }
+            .send-btn{
+                margin-top: 12px;
+                border:none;
+                box-shadow: none;
+                width: 180px;
+                height: 56px;
+                line-height: 56px;
+                text-align: center;
+                text-transform: capitalize;
+                font-size: 17px;
+                color: $colorprincipal;
+                @include border-radius;
+                background:#0086e1;
+                @include transition;
+                box-shadow: $colorprincipal;
+                &:hover{
+                    background:$hover-color;
+                }
+            }
+        }
+    }
+}
+/*****************************************/
+/*	 Section 7 - Politicas de Privacidad */
+/*****************************************/
+.politicas{
+    margin: 30px;
+    h2{
+        font-size: 40px;
+        font-weight: 700;
+        color:nth($list: $colores, $n:2 );
+        text-transform:capitalize;
+        margin-bottom: 32px;
+        }
+    p{
+        font-size:16px;
+        line-height: 28px;
+        color:nth($list: $colores, $n:2 );
+        margin-bottom:0px;
+        }
+    
+}
+/*****************************************/
+/*	 Section 8 - Terminos y Condiciones  */
+/*****************************************/
+.terminos-y-condiciones{
+    margin: 30px;
+    h2{
+        font-size: 40px;
+        font-weight: 700;
+        color:nth($list: $colores, $n:2 );
+        text-transform:capitalize;
+        margin-bottom: 32px;
+        }
+    p{
+        font-size:16px;
+        line-height: 28px;
+        color:nth($list: $colores, $n:2 );
+        margin-bottom:0px;
+        }
+}
+
+/*---------------------------------------
+.trabajos-area
+---------------------------------------*/
+.partners-area{
+    padding:110px 0;
+    .owl-nav{
+        display: none;
+    }
+    .owl-dots{
+        display: none;
+    }
+}
+
+
+/*---------------------------------------
+.footer-area
+---------------------------------------*/
+.footer-area {
+    background: $colorprincipal; }
+    .footer-area .footer-top {
+      padding: 39px 10px 6px 10px;
+     }
+      .footer-area .footer-top .single-widgets {
+        margin-top: 30px; }
+        .footer-area .footer-top .single-widgets .widgets-title h4 {
+          font-size: 15px;
+          font-weight: 400;
+          color: nth($list: $colores, $n:1 );
+          text-transform: capitalize;
+          margin-bottom: 15px; }
+        .footer-area .footer-top .single-widgets .widgets-text ul {
+          margin: 0;
+          padding: 0;
+          list-style: none; }
+          .footer-area .footer-top .single-widgets .widgets-text ul li {
+            display: block; }
+            .footer-area .footer-top .single-widgets .widgets-text ul li a {
+              display: block;
+              font-size: 16px;
+              line-height: 36px;
+              color: #FFFFFF;
+              text-transform: capitalize;
+              transition: all 0.5s; }
+              .footer-area .footer-top .single-widgets .widgets-text ul li a:hover {
+                color: $hover-color } 
+                .footer-area .footer-top .single-widgets .widgets-text button {
+                 background-color: nth($list: $colores, $n:2 );
+                 color: nth($list: $colores, $n:1 );
+                 border-color: $colorprincipal; 
+                }
+    .footer-area .footer-bottom {
+      padding: 30px 0;}
+      .footer-area .footer-bottom .copyright-area p {
+        margin-bottom: 0px;
+        font-size: 16px;
+        color: nth($list: $colores, $n:1 ); }
+        .footer-area .footer-bottom .copyright-area p span {
+          color: nth($list: $colores, $n:3 ); }
+      .footer-area .footer-bottom .social-media ul {
+        margin: 0;
+        padding: 0;
+        list-style: none; }
+        .footer-area .footer-bottom .social-media ul li {
+          display: inline-block; }
+          .footer-area .footer-bottom .social-media ul li a {
+            display: block;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            border-radius: 50%;
+            background: nth($list: $colores, $n:4 );
+            color: nth($list: $colores, $n:1 );
+            transition: all 0.5s; }
+            .footer-area .footer-bottom .social-media ul li a:hover {
+              color: nth($list: $colores, $n:1 );
+              background: $hover-color; }
+  /*---------------------------------------
+  .footer-area
+  ---------------------------------------*/

@@ -1,0 +1,335 @@
+/*---------------------------------------
+/*	 Primeras Etiquetas */
+/*---------------------------------------*/
+.html{
+    height: 100%;
+}
+.body{
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background: #FFFFFF;
+    font-family: 'Roboto';
+}     
+p {
+    line-height: 180%;
+} 
+h4 {
+    text-align: center;
+    padding: 1rem;
+}
+/*****************************************/
+/*	 Dando estilo a imagenes */
+/*****************************************/
+.image
+{
+    display: inline-block;
+	border: 1px solid rgba(0, 0, 0, .5);
+	border-radius: 5px;
+}
+.image img
+{
+    display: inline-block;
+	width: 100%;
+}	
+.image-full
+{
+    display: inline-block;
+	width: 100%;
+	margin: 0 0 3em 0;
+}	
+/*---------------------------------------
+.header-area 
+---------------------------------------*/
+.header{
+    display: flex; /*ACTIVAR FLEX BOX */
+    flex-direction: row;  /*direccion hijos*/
+    justify-content: space-between; /*distribuir los elementos hijos en eje principal*/
+    align-items: center; /*distribuir los elementos hijos en eje secundario - para que no se estiren en el bloque/caja */
+    /*si mi direccion es row, mi eje es "x", si es column mi eje es "y"*/
+    height: 80px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #6c7c69;
+    border-top: 2px #090a09;
+    flex-wrap: nowrap; /*para que siga debajo directamente respetando su ancho o alto, según el eje principal*/
+    /*GAP : separacion entre filas y columnas que tengamos
+    Se puede hacer --> gap: 3rem 1rem;  -->separas mas las filas entre ellas y menos sus columnas, porque aca el eje principal es la fila.
+    */
+    .header-left-list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 48%;
+        .header-left-items{
+            font-family: sans-serif;
+            font-size: 13px;
+            .nav-enlace{
+                color: #FFFFFF;
+                text-decoration: none;
+                font-family: sans-serif;
+            }
+        }
+    }
+    .header-right-list{
+        display: flex;
+        flex-direction: row;
+        width: 30%;
+        padding-right: 10px;
+        justify-content: flex-end;
+        gap: 1rem;    
+        .header-right-list li{
+            float: left;
+            }
+            .header-right-items{
+                transition: width 5s;
+                transition: height 5s;
+                &:hover{
+                    transform: scale(1.1, 1.1);
+            }
+        }
+    }
+}
+/*---------------------------------------
+.header-area 
+---------------------------------------*/
+/*---------------------------------------
+.nav-area 
+---------------------------------------*/
+#top-nav{       
+    text-align: center;
+    height: 116px;
+    border-bottom: 1px solid #6c7c69;
+}
+
+#logo{
+float: left;
+padding: none; /*relleno*/ 
+margin: none;
+height: 40px;
+width: 30%;
+} 
+#logo img{
+margin-left: 15px;
+width: 60%;
+float: left;
+padding: 0px 10px;
+}
+#menu li:hover {
+    transform: scale(1.5, 1.5);
+  }
+#top-nav .header-icono {
+    display: none;
+  }
+
+/*---------------------------------------
+.animacion-logo .nav-area 
+---------------------------------------*/
+.logo-effect{
+opacity: 0;
+animation: text-visible 0.0001s linear forwards;
+animation-delay: 1.5s;
+	&:after {
+		content: "";
+		top: 20;
+		left: 0;
+		position: absolute;
+		width: 0%;
+		height: 100px;
+		background: nth($list: $colores, $n:1 );
+		animation: logo-effect 2s cubic-bezier(0.19, 1, 0.22, 1);
+        animation-iteration-count: 4;
+		animation-delay: 1s;
+	}
+}
+@keyframes logo-effect {
+	0% {
+		left: 0;
+		width: 0%;
+	}
+	50% {
+		left: 0;
+		width: 30%;
+	}
+	100% {
+		left: 30%;
+		width: 0%;
+	}
+}
+
+@keyframes text-visible {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+/*---------------------------------------
+.animacion-logo .nav-area 
+---------------------------------------*/
+#menu{
+float: right;
+width: 70%;
+height: 100%;
+margin: none;
+transition: width 3s, height 4s;
+}
+#menu ul{
+font-size: 11px;
+text-align: center;
+float: right;
+margin: none;
+padding: 25px 5px 0px 0px;
+background: #ffffff;
+}
+#menu li{
+display: inline-block;
+padding: none;
+margin: none;
+}	/*
+#menu li a, #menu li span{
+display: inline-block;
+padding: 0em 1.5em;
+text-decoration: none;
+font-weight: 600;
+text-transform: uppercase;
+line-height: 60px; 
+}	*/
+#menu li a {
+display: inline-block;
+padding: 0em 1.5em;
+text-decoration: none;
+font-weight: 600;
+text-transform: uppercase;
+line-height: 60px;
+}
+#menu li span {
+display: inline-block;
+padding: 0em 1.5em;
+text-decoration: none;
+font-weight: 600;
+text-transform: uppercase;
+line-height: 60px;
+}
+#menu li a{
+color: #6c7c69;
+}
+#menu li:hover a, #menu li span{
+background: #FFF;
+color: #6c7c69;
+border-left: 1px solid #6c7c69;
+text-decoration: none; 
+}
+#menu li:hover a, #menu li span{
+	background: #FFF;
+	color: $colorprincipal;
+	border-left: 1px solid #6c7c69;
+	text-decoration: none;
+}
+/*---------------------------------------
+.nav-area 
+---------------------------------------*/
+
+/*
+***notas***
+a:hover { background: yellow; } */ /* El usuario esta sobre el enlace */
+/*
+a:active { color: lime; }  */      /* Enlaces activos */
+
+/*---------------------------------------
+.footer-area
+---------------------------------------*/
+.footer-area{
+    background:#6c7c69;
+    .footer-top{
+        padding: 39px 10px 6px 10px;
+        .single-widgets{
+            margin-top: 30px;
+            .widgets-title{
+                h4{
+                    font-size: 15px;
+                    font-weight: 400;
+                    color:#404040;
+                    text-transform: capitalize;
+                    margin-bottom: 15px;
+                    text-align: left;
+                }
+            }
+            .widgets-text{
+                ul{
+                    margin: 0;
+                    padding:0;
+                    list-style:none;
+                    li{
+                        display:block;
+                        a{
+                            display: block;
+                            font-size: 16px;
+                            line-height: 36px;
+                            color:#FFFFFF;
+                            text-transform: capitalize;
+                            @include transition;
+                            &:hover{
+                                color:$hover-color;
+                            }
+                        }
+                        button{
+                            background-color: #94C7DD;
+                            color:#FFFFFF;
+                            border-color: #6c7c69; 
+                    }
+                    }
+                }
+            }
+        }
+
+    }
+    .footer-bottom{
+        padding: 30px 0;
+        .copyright-area{
+            p{
+                margin-bottom: 0px;
+                font-size: 16px;
+                color: #FFFFFF; 
+                span{
+                    color: #dadee0; 
+                }
+            }
+        }
+        .social-media{
+            ul{
+                margin:0;
+                padding: 0;
+                list-style: none;
+                li{
+                    display: inline-block;
+                    a{
+                        display: block;
+                        width:35px;
+                        height: 35px;
+                        line-height: 35px;
+                        text-align: center;
+                        border-radius: 50%;
+                        background: #acadaf;
+                        color: #FFFFFF;
+                        @include transition;
+                        &:hover{
+                            color:#FFFFFF;
+                            background: #58b6e6; 
+                            width: 40px;
+                            height: 40px;
+                            display: overflow;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*---------------------------------------
+.footer-area
+--------------------------------------- */
