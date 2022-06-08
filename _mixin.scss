@@ -1,11 +1,9 @@
 @mixin border-radius {
     border-radius: 3px;
 }
-
 @mixin transition {
 transition: width 5s;
 transition: height 5s;
-
 }
 @mixin transform { 
 	transform: scale(1.3, 1.3);
@@ -25,8 +23,22 @@ transition: height 5s;
 	border-radius: 5px;
     border: solid 1px rgba(0, 0, 0, .5);
 }
-
 @mixin box-shadow {   
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.19);
 }
+@mixin titulos-secciones {
+        font-family: "Roboto";
+        color: $colorprincipal;
+        font-size: 35px;
+        text-align: center;
+        letter-spacing: 4px;
+    }
+
+@mixin titulos-secciones-blanco {
+        font-family: "Roboto";
+        color: white;
+        font-size: 35px;
+        text-align: center;
+        letter-spacing: 4px;
+    }
 

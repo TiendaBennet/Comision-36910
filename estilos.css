@@ -6,6 +6,10 @@ Nompre de la Plantilla Principal del Proyecto: Revestimientos Texturados
 WIREFRAME Y ESTRUCTURA DEL PROYECTO: https://tiendabennet.com.ar/revestimientos-texturados/
 Autor: Juan Stellatelli
 Repositories: https://github.com/TiendaBennet
+Aclaraciones: Desde el inicio de la cursada se utilizó la misma página Web, es por 
+eso que se conservan metodologías de dar estilo que quizas no sean las más eficientes 
+o adecuadas en algunos casos, pero creo que es bueno conservarlas para comparar y tener 
+como información para el futuro cuales son las mejores prácticas 
 
 ------------- Contenido Total ----------------
 
@@ -14,8 +18,13 @@ Section 2 - Presentación Modelos
 Section 3 - Models Transitions
 Section 4 - Estilos Grid Modelos
 Section 5 - Video Explicativo Revestimientos
-Section 6 - Mi Cuenta - Page Area
-
+Section 6 - Trabajos Terminados
+Section 7 - Contact - Page Area
+Section 8 - Politicas de Privacidad
+Section 9 - Terminos y Condiciones
+Section 10 - Blog 
+Section 11 - Control de Paginación
+Section 12 - Piedras (Donde se desarrollo primeros pasos con Bootstrap)  
 /*
 ------------------- Elementos Utilizados --------------------------------
 */
@@ -28,7 +37,6 @@ Colores:
 /*---------------------------------------
 Extends
 ---------------------------------------*/
-@import 'https://fonts.googleapis.com/css?family=Josefin+Slab';
 p, ol, ul {
   margin-top: 0;
   padding: 0;
@@ -255,7 +263,7 @@ h4 {
   text-align: center;
   float: right;
   margin: none;
-  padding: 25px 5px 0px 0px;
+  padding: 0px 5px 0px 0px;
   background: #ffffff;
 }
 
@@ -335,7 +343,7 @@ a:active { color: lime; }  */
 .footer-area .footer-top .single-widgets .widgets-title h4 {
   font-size: 15px;
   font-weight: 400;
-  color: #404040;
+  color: #FFFFFF;
   text-transform: capitalize;
   margin-bottom: 15px;
   text-align: left;
@@ -703,85 +711,6 @@ esa seria la lógica*/
   transition-timing-function: linear;
 }
 
-.section-project {
-  padding: 50px 0;
-  position: relative;
-  background-color: #222;
-}
-
-.section__title, .section__subtitle {
-  text-align: center;
-  color: white;
-  display: block;
-}
-
-.section__title {
-  font-size: 3em;
-  line-height: 1;
-  margin: 0 0 20px;
-}
-
-.section__subtitle {
-  font-size: 1.2em;
-  line-height: 1.5;
-  opacity: 0.5;
-}
-.section__subtitle a {
-  color: inherit;
-}
-
-.project-carousel {
-  position: relative;
-  padding: 50px 0;
-}
-
-.project-strip {
-  margin: 150px 0 150px;
-  filter: blur(10px);
-}
-.project-strip .project {
-  cursor: pointer;
-}
-.project-strip img {
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-}
-
-.project-screen {
-  width: 768px;
-  height: 451px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-.project-screen .project-detail {
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: 578px;
-  height: 361px;
-  margin: 32px auto 0;
-  z-index: 1;
-  background-color: #333;
-}
-.project-screen .screen-frame {
-  content: " ";
-  width: 768px;
-  height: 451px;
-  position: absolute;
-  background-image: url("https://dl.dropboxusercontent.com/u/26808427/cdn/experiments/training/macbook-frame.png");
-  background-repeat: no-repeat;
-}
-.project-screen .project {
-  margin-right: -100%;
-  float: left;
-  cursor: move;
-}
-
 /*****************************************/
 /*	 Section 5 - Video Explicativo Revestimientos */
 /*****************************************/
@@ -802,7 +731,67 @@ esa seria la lógica*/
 }
 
 /*****************************************/
-/*	 Section 6 - Mi Cuenta - Page Area */
+/*	 Section 6 - Trabajos Terminados */
+/*****************************************/
+.product-page-area {
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+.product-page-area .section-title h2 {
+  font-family: "Roboto";
+  color: #6c7c69;
+  font-size: 35px;
+  text-align: center;
+  letter-spacing: 4px;
+}
+.product-page-area .single-product {
+  padding: 5px;
+  margin-bottom: 30px;
+}
+.product-page-area .single-product .single-product-inner {
+  box-shadow: 0 1px #FFFFFF inset, 0 1px 8px rgb(242, 242, 242);
+}
+.product-page-area .single-product .single-product-inner .product-top {
+  margin-bottom: 5px;
+}
+.product-page-area .single-product .single-product-inner .product-img img {
+  position: relative;
+  animation-name: example;
+  animation-duration: 5s;
+  animation-delay: -1s;
+  animation-fill-mode: fowards;
+}
+@keyframes example {
+  from {
+    top: -1000px;
+  }
+  to {
+    top: 0px;
+  }
+}
+.product-page-area .single-product .single-product-inner .product-title h4 {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.product-page-area .single-product .single-product-inner .product-title h4 a {
+  color: #404040;
+  transition: width 5s;
+  transition: height 5s;
+}
+.product-page-area .single-product .single-product-inner .product-title h4 a:hover {
+  color: #58b6e6;
+}
+.product-page-area .single-product .single-product-inner .product-contetn p {
+  margin-bottom: 0px;
+  font-size: 16px;
+  line-height: 25px;
+  color: #828181;
+  text-align: center;
+}
+
+/*****************************************/
+/*	 Section 7 - Contact - Page Area */
 /*****************************************/
 .breadcum-area {
   margin: 10px 5px 0px 5px;
@@ -818,8 +807,7 @@ esa seria la lógica*/
   text-transform: capitalize;
   margin-bottom: 32px;
 }
-.breadcum-area .breadcum-text p {
-  font-size: 16px;
+.breadcum-area .breadcum-text h5 {
   line-height: 28px;
   color: #ffffff;
   margin-bottom: 0px;
@@ -839,8 +827,7 @@ esa seria la lógica*/
   background: #dadee0;
   border: none;
   box-shadow: none;
-  /*
-  @include border-radius(5px);*/
+  border-radius: 3px;
 }
 .contact-page-area .contact-form form .form-group textarea {
   width: 100%;
@@ -850,8 +837,7 @@ esa seria la lógica*/
   border: none;
   box-shadow: none;
   resize: none;
-  /*
-  @include border-radius(5px);*/
+  border-radius: 3px;
 }
 .contact-page-area .contact-form form .send-btn {
   margin-top: 12px;
@@ -863,19 +849,20 @@ esa seria la lógica*/
   text-align: center;
   text-transform: capitalize;
   font-size: 17px;
-  color: #6c7c69;
+  color: #FFFFFF;
   border-radius: 3px;
-  background: #0086e1;
+  background: #6c7c69;
   transition: width 5s;
   transition: height 5s;
   box-shadow: #6c7c69;
 }
 .contact-page-area .contact-form form .send-btn:hover {
   background: #58b6e6;
+  transform: scale(1.3, 1.3);
 }
 
 /*****************************************/
-/*	 Section 7 - Politicas de Privacidad */
+/*	 Section 8 - Politicas de Privacidad */
 /*****************************************/
 .politicas {
   margin: 30px;
@@ -895,7 +882,7 @@ esa seria la lógica*/
 }
 
 /*****************************************/
-/*	 Section 8 - Terminos y Condiciones  */
+/*	 Section 9 - Terminos y Condiciones  */
 /*****************************************/
 .terminos-y-condiciones {
   margin: 30px;
@@ -914,114 +901,188 @@ esa seria la lógica*/
   margin-bottom: 0px;
 }
 
-/*---------------------------------------
-.trabajos-area
----------------------------------------*/
-.partners-area {
-  padding: 110px 0;
+/*****************************************/
+/*	 Section 10 - Blog */
+/*****************************************/
+.blog-page-area {
+  padding: 120px 0;
 }
-.partners-area .owl-nav {
-  display: none;
+.blog-page-area .blog-list .single-blog {
+  margin-bottom: 50px;
 }
-.partners-area .owl-dots {
-  display: none;
+.blog-page-area .blog-list .single-blog .card {
+  border: none;
+  box-shadow: 0 1px 10px rgba(119, 119, 119, 0.2);
 }
-
-/*---------------------------------------
-.footer-area
----------------------------------------*/
-.footer-area {
-  background: #6c7c69;
+.blog-page-area .blog-list .single-blog .card .card-body {
+  padding-left: 40px;
+  padding-top: 40px;
 }
-
-.footer-area .footer-top {
-  padding: 39px 10px 6px 10px;
+.blog-page-area .blog-list .single-blog .card .card-body .card-title {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 700;
 }
-
-.footer-area .footer-top .single-widgets {
-  margin-top: 30px;
+.blog-page-area .blog-list .single-blog .card .card-body .card-title a {
+  color: #404040;
+  transition: width 5s;
+  transition: height 5s;
 }
-
-.footer-area .footer-top .single-widgets .widgets-title h4 {
-  font-size: 15px;
-  font-weight: 400;
-  color: #FFFFFF;
-  text-transform: capitalize;
+.blog-page-area .blog-list .single-blog .card .card-body .card-title a:hover {
+  color: #58b6e6;
+}
+.blog-page-area .blog-list .single-blog .card .card-body .card-text {
   margin-bottom: 15px;
 }
+.blog-page-area .blog-list .single-blog .card .card-body .card-text .blog-date {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0083e1;
+}
+.blog-page-area .blog-list .single-blog .card .card-body .card-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #828181;
+}
+.blog-page-area .blog-list .single-blog .card img {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
 
-.footer-area .footer-top .single-widgets .widgets-text ul {
+/*****************************************/
+/*	 Section 11 - Control de Paginación */
+/*****************************************/
+.paginacion-area {
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+.paginacion-area ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-
-.footer-area .footer-top .single-widgets .widgets-text ul li {
-  display: block;
+.paginacion-area ul li {
+  display: inline-block;
+  margin-right: 10px;
 }
-
-.footer-area .footer-top .single-widgets .widgets-text ul li a {
+.paginacion-area ul li a {
   display: block;
-  font-size: 16px;
-  line-height: 36px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 3px;
+  background: #e2ebfb;
+  color: #404040;
+  font-weight: 700;
+  transition: width 5s;
+  transition: height 5s;
+}
+.paginacion-area ul li a:hover {
+  background: linear-gradient(to right bottom, #6c7c69, #778f72, #8cb384, #98ce8d, #a8f09a);
   color: #FFFFFF;
-  text-transform: capitalize;
-  transition: all 0.5s;
 }
 
-.footer-area .footer-top .single-widgets .widgets-text ul li a:hover {
+/*****************************************/
+/*	 Section 12 - Piedras */
+/*****************************************/
+#main-row {
+  background-color: #6c7c69;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-top: 2px #090a09;
+  flex-wrap: nowrap;
+}
+
+#header-left-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 48%;
+}
+
+#header-left-items {
+  font-family: sans-serif;
+  font-size: 13px;
+}
+
+#nav-enlace {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+#header-right-list {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  padding-right: 10px;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+#header-right-list li {
+  float: left;
+}
+
+#header-right-items {
+  transition: width 5s;
+  transition: height 5s;
+}
+
+#header-right-items .hover {
+  transform: scale(1.1, 1.1);
+}
+
+#menu-piedras {
+  padding: 10px 10px 20px 10px;
+  background-color: #778f72;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+#menu-piedras a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.card {
+  align-items: center;
+}
+.card .card-img-overlay .primary-btn {
+  display: inline-block;
+  background: #ffffff;
+  font-size: 17px;
+  font-weight: 400;
+  border-radius: 3px;
+  color: #404040;
+  padding: 12px 35px;
+  text-transform: capitalize;
+  text-align: center;
+  transition: width 5s;
+  transition: height 5s;
+}
+.card .card-img-overlay .primary-btn:hover {
   color: #58b6e6;
 }
 
-.footer-area .footer-top .single-widgets .widgets-text button {
-  background-color: #1c3d18;
-  color: #FFFFFF;
-  border-color: #6c7c69;
-}
-
-.footer-area .footer-bottom {
-  padding: 30px 0;
-}
-
-.footer-area .footer-bottom .copyright-area p {
-  margin-bottom: 0px;
-  font-size: 16px;
-  color: #FFFFFF;
-}
-
-.footer-area .footer-bottom .copyright-area p span {
-  color: #dadee0;
-}
-
-.footer-area .footer-bottom .social-media ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.footer-area .footer-bottom .social-media ul li {
-  display: inline-block;
-}
-
-.footer-area .footer-bottom .social-media ul li a {
-  display: block;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
+#titulos-modelos-2 {
+  font-family: "Roboto";
+  color: white;
+  font-size: 35px;
   text-align: center;
-  border-radius: 50%;
-  background: #acadaf;
-  color: #FFFFFF;
-  transition: all 0.5s;
+  letter-spacing: 4px;
+  text-align: center;
 }
-
-.footer-area .footer-bottom .social-media ul li a:hover {
-  color: #FFFFFF;
-  background: #58b6e6;
-}
-
-/*---------------------------------------
-.footer-area
----------------------------------------*/
 
 /*# sourceMappingURL=estilos.css.map */

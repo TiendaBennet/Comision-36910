@@ -1,5 +1,5 @@
 <!DOCTYPE html> <!-- Declaración del tipo de documento es decir versión HTML5 -->
-<html lang="en"> <!-- Inicio del documento -->
+<html lang="es"> <!-- Inicio del documento -->
 <head>
     <title>Revestimientos Texturados</title> <!-- se ve reflejado en la pestña del navegador -->
     <meta charset="UTF-8"> <!-- Permitir caracteres especiales entre otros -->
@@ -7,19 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adaptarse al ancho del dispositivo, Pc, tablet, escritorio -->
     <!--La width=device-widthparte establece el ancho de la página para seguir el ancho de pantalla del dispositivo (que variará según el dispositivo).
     La initial-scale=1.0parte establece el nivel de zoom inicial cuando el navegador carga la página por primera vez.-->
-    
+    <meta name="tiendabennet - venta al por menor y por mayor de revestimientos para el hogar y la construcción." content="Encontra reveistimientos de pvc, lisos y texturados, en diversos colores">
     <!-- El navegador no entiende SCSS, si lo dejas puesto, cuando abras la pestaña lo vas a ver roto, se debe dejar el CSS -->
     <link rel="stylesheet" href="./Estilos/bootstrap/bootstrap.min.css" > 
-    
     <link rel="stylesheet" href="./Estilos/estilos.css" ><!--Siempre colocar el href css último, para poder pisar a los anteriores-->
-    <link rel="stylesheet" href="./Estilos/css/responsive.css" >
-
-    <!-- Font Awsome 354 Icon -->
-    <script src="https://kit.fontawesome.com/420772965a.js" crossorigin="anonymous"></script>
-    
+    <link rel="stylesheet" href="./Estilos/css/responsive.css" ><!--ULITMO PARA QUE COMA AL RESTO -->
+    <script src="https://kit.fontawesome.com/420772965a.js" crossorigin="anonymous"></script><!-- Font Awsome 354 Icon -->    
 </head>
 <body>
-<!-- COMIENZA HEADER AREA -->
+<!-- Comienza Header -->
 <header class="header">
     <ul class="header-left-list"> 
         <li class="header-left-items"><img src="./Estilos/imagenes/logo-whatsapp.svg" width="15px" height="15px"></li>              
@@ -48,15 +44,13 @@
         </li>
     </ul>
 </header>
-<!-- COMIENZA HEADER AREA -->
+<!-- Comienza Header -->
 
 <!-- CUIDADO, si el header es un bloque, no hace falta poner un bloque sobre otro bloque, ahi es linea, no podes poner div, luego 2 divs y luego otros 4 divs para cada div anterior -->
 <!-- DIV agrupa una parte generica de info o contenido. 
 Como es de bloque, si no colocas nada dentro, te genera un bloque sin espacios directaemente -->
 
-<!-- ************************************************************************* -->
-
-<!-- COMIENZA MENU DE NAVECACIÓN -->         
+<!-- Comienza Menú Navegación -->         
 <nav>
     <div id="top-nav">             
         <div class="logo-effect" id="logo">
@@ -65,11 +59,11 @@ Como es de bloque, si no colocas nada dentro, te genera un bloque sin espacios d
      <nav>
         <div id="menu">    
             <ul>
-                <li class="active"><a href="https://tiendabennet.com.ar/categoria-producto/aberturas/" target="_blank">Aberturas</a></li>
-                <li class="active"><a href="https://tiendabennet.com.ar/categoria-producto/eco-deck/" target="_blank">Madera Plastica WPC</a></li>
-                <li class="active"><a href="https://tiendabennet.com.ar/categoria-producto/deco-jardin/" target="_blank">Jardin y Exteriores</a></li>                    
+                <li class="active"><a href="#" target="_blank">Aberturas</a></li>
+                <li class="active"><a href="#" target="_blank">Madera Plastica WPC</a></li>
+                <li class="active"><a href="#" target="_blank">Jardin y Exteriores</a></li>                    
                 <li class="active"><a href="piedras.html" target="_blank">Piedras</a></li>
-                <li class="active"><a href="https://tiendabennet.com.ar/categoria-producto/tabique-modular/" target="_blank">Tablones</a></li>
+                <li class="active"><a href="#" target="_blank">Tablones</a></li>
                 <li class="active"><a href="index.html" target="_blank">Revestimientos PVC</a></li>
                 <li class="active"><a href="contacto.html" target="_blank">Contacto</a></li>
                 <li class="active"><a href="blog.html" target="_blank">Blog</a></li>
@@ -79,6 +73,7 @@ Como es de bloque, si no colocas nada dentro, te genera un bloque sin espacios d
     <i class="header-icono fas fa-bars"></i>   
     </div>
 </nav>
+<!-- Finaliza Menú Navegación -->         
 <!-- Section 1 - Título con 2 imágenes -->  
 <section class="imagen-con-titulo">    
     <div id="Section1">
@@ -106,10 +101,7 @@ Como es de bloque, si no colocas nada dentro, te genera un bloque sin espacios d
         <a href="index.html" class="primary-btn">Más Información</a>
     </div>
 </section>
-<!-- COMIENZA MENU DE NAVECACIÓN -->         
-<!-- PRESENTACION MODELOS - SECCION 1-->
-
-
+<!-- Section 2 - Presentación Modelos-->
 <section class="modelos">
     <div class="modelos-grid">
         <div class="modelos-grid__hijo modelos-grid--titulo"><h2 id="titulo-modelos">Modelos</h2> 
@@ -149,134 +141,7 @@ Como es de bloque, si no colocas nada dentro, te genera un bloque sin espacios d
         </div>
     </div>
 </section>
-
-
-
-
-
-
-		<!-- COMIENZA CARROUSEL TRABAJOS 
-    	<div class="carrousel-area">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="slide-trabajos owl-carousel">
-							<div class="single-partner">
-								<a href="#"><img src="Estilos/imagenes/carrousel web/1.jpg" alt="trabajos"></a>
-							</div>
-							<div class="single-partner">
-								<a href="#"><img src="Estilos/imagenes/carrousel web/2.jpg" alt="trabajos"></a>
-							</div>
-							<div class="single-partner">
-								<a href="#"><img src="Estilos/imagenes/carrousel web/3.jpg" alt="trabajos"></a>
-							</div>
-							<div class="single-partner">
-								<a href="#"><img src="Estilos/imagenes/carrousel web/4.jpg" alt="trabajos"></a>
-							</div>
-							<div class="single-partner">
-								<a href="#"><img src="Estilos/imagenes/carrousel web/5.jpg" alt="trabajos"></a>
-							</div>
-							<div class="single-partner">
-								<a href="#"><img src="Estilos/imagenes/carrousel web/6.jpeg" alt="trabajos"></a>
-							</div>
-							<div class="single-partner">
-								<a href="#"><img src="Estilos/imagenes/carrousel web/7.jpeg" alt="trabajos"></a>
-							</div>
-							<div class="single-partner">
-								<a href="#"><img src="Estilos/imagenes/carrousel web/8.jpeg" alt="trabajos"></a>
-							</div>
-							<div class="single-partner">
-								<a href="#"><img src="Estilos/imagenes/carrousel web/9.jpeg" alt="trabajos"></a>
-							</div>
-							<div class="single-partner">
-								<a href="#"><img src="Estilos/imagenes/carrousel web/10.jpeg" alt="trabajos"></a>
-							</div>
-							<div class="single-partner">
-								<a href="#"><img src="Estilos/imagenes/carrousel web/11.jpeg" alt="trabajos"></a>
-							</div>
-							<div class="single-partner">
-								<a href="#"><img src="Estilos/imagenes/carrousel web/12.jpeg" alt="trabajos"></a>
-							</div>
-							<div class="single-partner">
-								<a href="#"><img src="Estilos/imagenes/carrousel web/13.jpeg" alt="trabajos"></a>
-							</div>
-							<div class="single-partner">
-								<a href="#"><img src="Estilos/imagenes/carrousel web/14.jpeg" alt="trabajos"></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		 COMIENZA CARROUSEL TRABAJOS -->
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-
-         <div class="section section-project">
-            <h2 class="section__title">Project Carousel</h2><small class="section__subtitle">
-               A simple Synchronised carousel by<a href="https://codepen.io/ariona">@ariona_rian</a><br/>using Slick Carousel</small>
-            <div class="project-carousel">
-              <div class="project-strip">
-                <div class="project"><img src="http://unsplash.it/578/360/?image=26&amp;blur" alt=""/></div>
-                <div class="project"><img src="http://unsplash.it/578/360/?image=39&amp;blur" alt=""/></div>
-                <div class="project"><img src="http://unsplash.it/578/360/?image=52&amp;blur" alt=""/></div>
-                <div class="project"><img src="http://unsplash.it/578/360/?image=65&amp;blur" alt=""/></div>
-                <div class="project"><img src="http://unsplash.it/578/360/?image=78&amp;blur" alt=""/></div>
-                <div class="project"><img src="http://unsplash.it/578/360/?image=91&amp;blur" alt=""/></div>
-                <div class="project"><img src="http://unsplash.it/578/360/?image=104&amp;blur" alt=""/></div>
-                <div class="project"><img src="http://unsplash.it/578/360/?image=117&amp;blur" alt=""/></div>
-                <div class="project"><img src="http://unsplash.it/578/360/?image=130&amp;blur" alt=""/></div>
-              </div>
-              <div class="project-screen">
-                <div class="project-detail">
-                  <div class="project"><img src="http://unsplash.it/578/361/?image=26" alt=""/></div>
-                  <div class="project"><img src="http://unsplash.it/578/361/?image=39" alt=""/></div>
-                  <div class="project"><img src="http://unsplash.it/578/361/?image=52" alt=""/></div>
-                  <div class="project"><img src="http://unsplash.it/578/361/?image=65" alt=""/></div>
-                  <div class="project"><img src="http://unsplash.it/578/361/?image=78" alt=""/></div>
-                  <div class="project"><img src="http://unsplash.it/578/361/?image=91" alt=""/></div>
-                  <div class="project"><img src="http://unsplash.it/578/361/?image=104" alt=""/></div>
-                  <div class="project"><img src="http://unsplash.it/578/361/?image=117" alt=""/></div>
-                  <div class="project"><img src="http://unsplash.it/578/361/?image=130" alt=""/></div>
-                </div>
-                <div class="screen-frame"></div>
-              </div>
-            </div>
-          </div>
-
-
-        -->
-
-
-
-
-
-
-
-
-
-
-
-    
-
-<!-- COMIENZA VIDEO AREA -->
+<!-- Section 5 - Video Explicativo Revestimientos -->
 <div class="video-area">
     <div class="container">
         <div class="row">
@@ -296,7 +161,81 @@ Como es de bloque, si no colocas nada dentro, te genera un bloque sin espacios d
         </div>
     </div>
 </div>
-<!-- COMIENZA VIDEO AREA -->
+<!-- Section 6 - Trabajos Terminados -->
+<div class="product-page-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title text-center">
+                    <h2>Trabajos Terminados</h2>
+                    <p>Les enseñamos algunas obras que se terminaron.<br />¡¡Siganos en nuestras redes para más fotogrfías!! </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="single-product ">
+                      <div class="single-product-inner">
+                          <div class="product-img text-center">
+                              <a href="#"><img class="img-fluid" src="Estilos/imagenes/ObraVintage.png" alt="product"></a>
+                          </div>
+                          <div class="product-title">
+                              <h4><a href="#">Madera Vintage</a></h4>
+                          </div>
+                          <div class="product-contetn">
+                              <p>Trabajo realizado en la provincia de Buenos Aires. <br>Tablas de 4 y 6 mts para una habitación y una galería exterior.</p>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="single-product ">
+                      <div class="single-product-inner">
+                          <div class="product-img text-center">
+                              <a href="#"><img class="img-fluid" src="Estilos/imagenes/ObraMadera.png" alt="product"></a>
+                          </div>
+                          <div class="product-title">
+                              <h4><a href="#">Madera</a></h4>
+                          </div>
+                          <div class="product-contetn">
+                              <p>Trabajo realizado en la provincia de Buenos Aires. <br> Tablas de 2 mts para aleros de una casa en remodelación. </p>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="single-product ">
+                      <div class="single-product-inner">
+                          <div class="product-img text-center">
+                              <a href="#"><img class="img-fluid" src="Estilos/imagenes/ObraNogal.png" alt="product"></a>
+                          </div>
+                          <div class="product-title">
+                              <h4><a href="#">Nogal</a></h4>
+                          </div>
+                          <div class="product-contetn">
+                              <p>Trabajo realizado en la provincia de Entre Ríos. <br> Diseñada por el mismo dueño, increible trabajo con cortes a medida. </p>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="single-product ">
+                      <div class="single-product-inner">
+                          <div class="product-img text-center">
+                              <a href="#"><img class="img-fluid" src="Estilos/imagenes/ObraGrafito.png" alt="product"></a>
+                          </div>
+                          <div class="product-title">
+                              <h4><a href="#">Grafito</a></h4>
+                          </div>
+                          <div class="product-contetn">
+                              <p>Trabajo realizado en la provincia de Neuquen. <br> Fotografía enviada por la dueña y diseñadora, utilizada como fondo infinito.</p>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>    
 <!-- Comienza Footer Area -->
     <footer class="footer-area">
         <div class="footer-top">
@@ -325,11 +264,11 @@ Como es de bloque, si no colocas nada dentro, te genera un bloque sin espacios d
                             </div>
                             <div class="widgets-text">
                                 <ul>
-                                    <li><a href="#">Contacto</a></li>
+                                    <li><a href="contacto.html">Contacto</a></li>
                                     <li><a href="#">Puntos de Retiro</a></li>
-                                    <li><a href="#">Dejanos tu comentario</a></li>
-                                    <li><a href="#">Terminos y Condiciones</a></li>
-                                    <li><a href="#">Políticas de Privacidad</a></li>
+                                    <li><a href="contacto.html">Dejanos tu comentario</a></li>
+                                    <li><a href="terminos-y-condiciones.html">Terminos y Condiciones</a></li>
+                                    <li><a href="politica-de-privacidad.html">Políticas de Privacidad</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -344,7 +283,7 @@ Como es de bloque, si no colocas nada dentro, te genera un bloque sin espacios d
                                     <li><a href="#">+ 54 9 11 64187835</a></li>
                                     <li><a href="#">Villa del Parque - CABA</a></li>
                                     <li><a href="#">Seguí tu envío</a></li>
-
+                                    <li><a href="http://qr.afip.gob.ar/?qr=9wI1A7akFPJGt855PpS73Q,," target="_F960AFIPInfo"><img src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg" width="50"  ></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -388,9 +327,6 @@ Como es de bloque, si no colocas nada dentro, te genera un bloque sin espacios d
         </div>
     </footer>
 <!-- Finaliza Footer Area -->
-
-
-
 </body>
 <script src="js/myscript.js"></script>
 </html>

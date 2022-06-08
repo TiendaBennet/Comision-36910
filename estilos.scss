@@ -5,6 +5,10 @@ Nompre de la Plantilla Principal del Proyecto: Revestimientos Texturados
 WIREFRAME Y ESTRUCTURA DEL PROYECTO: https://tiendabennet.com.ar/revestimientos-texturados/
 Autor: Juan Stellatelli
 Repositories: https://github.com/TiendaBennet
+Aclaraciones: Desde el inicio de la cursada se utilizó la misma página Web, es por 
+eso que se conservan metodologías de dar estilo que quizas no sean las más eficientes 
+o adecuadas en algunos casos, pero creo que es bueno conservarlas para comparar y tener 
+como información para el futuro cuales son las mejores prácticas 
 
 ------------- Contenido Total ----------------
 
@@ -13,8 +17,13 @@ Section 2 - Presentación Modelos
 Section 3 - Models Transitions
 Section 4 - Estilos Grid Modelos
 Section 5 - Video Explicativo Revestimientos
-Section 6 - Mi Cuenta - Page Area
-
+Section 6 - Trabajos Terminados
+Section 7 - Contact - Page Area
+Section 8 - Politicas de Privacidad
+Section 9 - Terminos y Condiciones
+Section 10 - Blog 
+Section 11 - Control de Paginación
+Section 12 - Piedras (Donde se desarrollo primeros pasos con Bootstrap)  
 /*
 ------------------- Elementos Utilizados --------------------------------
 */
@@ -92,8 +101,8 @@ p, ol, ul {
         @include transition;
         &:hover{
             color: $hover-color;
+        }
     }
-}
 }
 #Section1-b img{
     width: 30%;
@@ -101,17 +110,12 @@ p, ol, ul {
     margin: 20px;
     padding: none;
     transform: translate(130%, -40%);
-
 }
 /*****************************************/
 /*	 Section 2 - Presentación Modelos */
 /*****************************************/
 #titulo-modelos{
-	font-family: 'Roboto';
-	color: $colorprincipal;
-    font-size: 35px;
-	text-align: center;
-    letter-spacing: 4px;    
+	@include titulos-secciones;   
 }
 .modelos-grid{
     display: grid; /* Propiedad obligatoria para usar CSS grids*/
@@ -177,7 +181,6 @@ p, ol, ul {
   .modelos-grid--vintage:hover {
     width: 300px;
   }
-
 /*****************************************/
 /*	 Section 4 - Estilos Grid Modelos */
 /*****************************************/
@@ -251,145 +254,14 @@ p, ol, ul {
     @include modelos-grid;
     background-image: url("imagenes/marfil.jpg");
     transition-timing-function: linear;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@import 'https://fonts.googleapis.com/css?family=Josefin+Slab';
-
-
-.section-project{
-	padding: 50px 0;
-	position: relative;
-	background-color: #222;
-}
-
-.section__title, .section__subtitle{
-	text-align: center;
-	color: white;
-	display: block;
-}
-.section__title{
-	font-size: 3em;
-	line-height: 1;
-	margin: 0 0 20px;
-	
-}
-.section__subtitle{
-	font-size: 1.2em;
-	line-height: 1.5;
-	opacity: .5;
-	
-	a{
-		color: inherit
-	}
-}
-
-
-// Project carousel outer wrapper
-.project-carousel{
-	position: relative;
-	padding: 50px 0;
-}
-
-// Project Strip 
-.project-strip{
-	margin: 150px 0 150px;
-	filter: blur(10px);
-	
-	.project{
-		cursor: pointer;
-	}
-	img{
-		max-width: 100%;
-		width: 100%;
-		height: auto;
-
-	}
-}
-
-// Project Details
-.project-screen{
-	width: 768px;
-	height: 451px;
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	margin: auto;
-	
-	// Project Detail Carousel    
-	.project-detail{
-		position: absolute;
-		left: 0;
-		right: 0;
-		width: 578px;
-		height: 361px;
-		margin: 32px auto 0;
-		z-index: 1;
-		background-color: #333;
-	}
-	
-	// Macbook frame 	
-	.screen-frame{
-		content:" ";
-		width: 768px;
-		height: 451px;
-		position: absolute;
-		background-image: url("https://dl.dropboxusercontent.com/u/26808427/cdn/experiments/training/macbook-frame.png");
-		background-repeat: no-repeat;
-	}
-	
-	// Initial style to stack the slides 	
-	.project{
-		margin-right: -100%;
-		float: left;
-		cursor: move;
-	}
-	
-}
-
-
-/*****************************************/
+    /*****************************************/
 /*	 Section 5 - Video Explicativo Revestimientos */
 /*****************************************/
 .video-area{
     padding-top: 60px;
     padding-bottom: 30px;
     .titulo-video{
-        font-family: "Roboto";
-        color: $colorprincipal;
-        font-size: 35px;
-        text-align: center;
-        letter-spacing: 4px;
+        @include titulos-secciones;
     }
     .video{
         margin-top: 25px;
@@ -398,7 +270,66 @@ p, ol, ul {
     }        
 }
 /*****************************************/
-/*	 Section 6 - Mi Cuenta - Page Area */
+/*	 Section 6 - Trabajos Terminados */
+/*****************************************/
+.product-page-area{
+    padding-top: 60px;
+    padding-bottom: 30px;
+    .section-title{
+        h2{
+        @include titulos-secciones;
+    }
+    }
+      .single-product{
+        padding: 5px;
+        margin-bottom: 30px;
+        .single-product-inner{
+            box-shadow: 0 1px #FFFFFF inset, 0 1px 8px rgba(242, 242, 242, 1);
+            .product-top{
+                margin-bottom: 5px;
+            }
+            .product-img{
+                img{
+                    position: relative;
+                    animation-name: example;
+                    animation-duration: 5s;
+                    animation-delay: -1s;
+                    animation-fill-mode: fowards;
+                    @keyframes example {
+                        from {top: -1000px;}
+                        to {top: 0px;}
+                      
+                      }
+                }
+            }
+            .product-title{
+                h4{
+                    font-size: 18px;
+                    font-weight: 700;
+                    text-transform: capitalize;
+                    a{
+                        color:#404040;
+                        @include transition;
+                        &:hover{
+                            color: $hover-color;
+                        }
+                    }
+                }
+            }
+            .product-contetn{
+                p{
+                    margin-bottom: 0px;
+                    font-size: 16px;
+                    line-height: 25px;
+                    color:#828181;
+                    text-align: center;
+                }
+            }
+        }
+        }
+      }
+/*****************************************/
+/*	 Section 7 - Contact - Page Area */
 /*****************************************/
 .breadcum-area{
     margin: 10px 5px 0px 5px;
@@ -414,8 +345,7 @@ p, ol, ul {
             text-transform:capitalize;
             margin-bottom: 32px;
         }
-        p{
-            font-size:16px;
+        h5{
             line-height: 28px;
             color:#ffffff;
             margin-bottom:0px;
@@ -435,8 +365,8 @@ p, ol, ul {
                     padding-left: 30px;
                     background: nth($list: $colores, $n:3);
                     border:none;
-                    box-shadow: none;/*
-                    @include border-radius(5px);*/
+                    box-shadow: none;
+                    @include border-radius;
                 }
                 textarea{
                     width: 100%;
@@ -445,9 +375,8 @@ p, ol, ul {
                     background: nth($list: $colores, $n:3);
                     border:none;
                     box-shadow: none;
-                    resize:none;/*
-                    @include border-radius(5px);*/
-
+                    resize:none;
+                    @include border-radius;
                 }
             }
             .send-btn{
@@ -460,20 +389,21 @@ p, ol, ul {
                 text-align: center;
                 text-transform: capitalize;
                 font-size: 17px;
-                color: $colorprincipal;
+                color: nth($list: $colores, $n:1);
                 @include border-radius;
-                background:#0086e1;
+                background: $colorprincipal;
                 @include transition;
                 box-shadow: $colorprincipal;
                 &:hover{
                     background:$hover-color;
+                    @include transform;
                 }
             }
         }
     }
 }
 /*****************************************/
-/*	 Section 7 - Politicas de Privacidad */
+/*	 Section 8 - Politicas de Privacidad */
 /*****************************************/
 .politicas{
     margin: 30px;
@@ -493,7 +423,7 @@ p, ol, ul {
     
 }
 /*****************************************/
-/*	 Section 8 - Terminos y Condiciones  */
+/*	 Section 9 - Terminos y Condiciones  */
 /*****************************************/
 .terminos-y-condiciones{
     margin: 30px;
@@ -511,84 +441,164 @@ p, ol, ul {
         margin-bottom:0px;
         }
 }
-
-/*---------------------------------------
-.trabajos-area
----------------------------------------*/
-.partners-area{
-    padding:110px 0;
-    .owl-nav{
-        display: none;
+/*****************************************/
+/*	 Section 10 - Blog */
+/*****************************************/
+.blog-page-area{
+    padding: 120px 0;
+    .blog-list{
+        .single-blog{
+            margin-bottom: 50px;
+            .card{
+                border:none;
+                box-shadow: 0 1px 10px rgba(119, 119, 119, .2);
+                .card-body{
+                    padding-left: 40px;
+                    padding-top: 40px;
+                    .card-title{
+                        font-size: 22px;
+                        line-height: 32px;
+                        font-weight: 700;
+                        a{
+                            color:#404040;
+                            @include transition;
+                            &:hover{
+                                color:$hover-color;
+                            }
+                        }
+                    }
+                    .card-text{
+                        margin-bottom: 15px;
+                        .blog-date{
+                            font-size: 18px;
+                            font-weight: 700;
+                            color:#0083e1;
+                        }
+                    }
+                    .card-text{
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 28px;
+                        color:#828181;
+                    }
+                }
+                img{
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                }
+            }
+        }
     }
-    .owl-dots{
-        display: none;
+}
+/*****************************************/
+/*	 Section 11 - Control de Paginación */
+/*****************************************/
+.paginacion-area{
+    margin-bottom: 20px;
+    margin-left: 30px;
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+            display: inline-block;
+            margin-right: 10px;
+            a{
+                display: block;
+                width:50px;
+                height: 50px;
+                line-height: 50px;
+                text-align:center;
+                @include border-radius;
+                background: #e2ebfb;
+                color:#404040;
+                font-weight: 700;
+                @include transition;
+                &:hover{
+                    background: linear-gradient(to right bottom, $colorprincipal, #778f72, #8cb384, #98ce8d, #a8f09a);
+                    color:nth($list: $colores, $n:1 );
+                }
+            }
+        }
     }
 }
 
-
-/*---------------------------------------
-.footer-area
----------------------------------------*/
-.footer-area {
-    background: $colorprincipal; }
-    .footer-area .footer-top {
-      padding: 39px 10px 6px 10px;
-     }
-      .footer-area .footer-top .single-widgets {
-        margin-top: 30px; }
-        .footer-area .footer-top .single-widgets .widgets-title h4 {
-          font-size: 15px;
-          font-weight: 400;
-          color: nth($list: $colores, $n:1 );
-          text-transform: capitalize;
-          margin-bottom: 15px; }
-        .footer-area .footer-top .single-widgets .widgets-text ul {
-          margin: 0;
-          padding: 0;
-          list-style: none; }
-          .footer-area .footer-top .single-widgets .widgets-text ul li {
-            display: block; }
-            .footer-area .footer-top .single-widgets .widgets-text ul li a {
-              display: block;
-              font-size: 16px;
-              line-height: 36px;
-              color: #FFFFFF;
-              text-transform: capitalize;
-              transition: all 0.5s; }
-              .footer-area .footer-top .single-widgets .widgets-text ul li a:hover {
-                color: $hover-color } 
-                .footer-area .footer-top .single-widgets .widgets-text button {
-                 background-color: nth($list: $colores, $n:2 );
-                 color: nth($list: $colores, $n:1 );
-                 border-color: $colorprincipal; 
-                }
-    .footer-area .footer-bottom {
-      padding: 30px 0;}
-      .footer-area .footer-bottom .copyright-area p {
-        margin-bottom: 0px;
-        font-size: 16px;
-        color: nth($list: $colores, $n:1 ); }
-        .footer-area .footer-bottom .copyright-area p span {
-          color: nth($list: $colores, $n:3 ); }
-      .footer-area .footer-bottom .social-media ul {
-        margin: 0;
-        padding: 0;
-        list-style: none; }
-        .footer-area .footer-bottom .social-media ul li {
-          display: inline-block; }
-          .footer-area .footer-bottom .social-media ul li a {
-            display: block;
-            width: 35px;
-            height: 35px;
-            line-height: 35px;
-            text-align: center;
-            border-radius: 50%;
-            background: nth($list: $colores, $n:4 );
-            color: nth($list: $colores, $n:1 );
-            transition: all 0.5s; }
-            .footer-area .footer-bottom .social-media ul li a:hover {
-              color: nth($list: $colores, $n:1 );
-              background: $hover-color; }
-  /*---------------------------------------
-  .footer-area
-  ---------------------------------------*/
+/*****************************************/
+/*	 Section 12 - Piedras */
+/*****************************************/
+#main-row {
+    background-color: #6c7c69;
+    display: flex; 
+    flex-direction: row;  
+    justify-content: space-between;
+    align-items: center; 
+    height: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top: 2px #090a09;
+    flex-wrap: nowrap;
+}
+#header-left-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 48%;
+}
+#header-left-items{
+    font-family: sans-serif;
+    font-size: 13px;}
+#nav-enlace{
+        color: #FFFFFF;
+        text-decoration: none;
+        font-family: sans-serif;
+    }
+#header-right-list{
+        display: flex;
+        flex-direction: row;
+        width: 30%;
+        padding-right: 10px;
+        justify-content: flex-end;
+        gap: 1rem;    
+}
+#header-right-list li{
+            float: left;
+            }
+#header-right-items{
+                transition: width 5s;
+                transition: height 5s;
+          }      
+#header-right-items .hover{
+                    transform: scale(1.1, 1.1);
+            }
+#menu-piedras{
+    padding: 10px 10px 20px 10px;
+    background-color: #778f72;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+}        
+#menu-piedras a{
+    color: #FFFFFF;
+    text-decoration: none;
+}      
+.card{
+    align-items: center;
+    .card-img-overlay{
+        .primary-btn{
+            display: inline-block;
+            background:#ffffff;
+            @include primary-btn;
+            @include transition;
+            &:hover{
+                color: $hover-color;
+        }
+    } 
+}
+}
+#titulos-modelos-2{
+    @include titulos-secciones-blanco;
+    text-align: center;
+}
