@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**/
 
 
@@ -514,3 +515,609 @@ bloque3{
 /*La ultima media sobreescribe la anterior*/
 /*FIN MEDIA 600 px*/
 }
+=======
+/*
+------------- Información Inicial ----------------
+
+Nompre de la Plantilla Principal del Proyecto: Revestimientos Texturados
+WIREFRAME Y ESTRUCTURA DEL PROYECTO: https://tiendabennet.com.ar/revestimientos-texturados/
+Autor: Juan Stellatelli
+Repositories: https://github.com/TiendaBennet
+Aclaraciones: Desde el inicio de la cursada se utilizó la misma página Web, es por 
+eso que se conservan metodologías de dar estilo que quizas no sean las más eficientes 
+o adecuadas en algunos casos, pero creo que es bueno conservarlas para comparar y tener 
+como información para el futuro cuales son las mejores prácticas 
+
+------------- Contenido Total ----------------
+
+Section 1 - Titulo con 2 imágenes
+Section 2 - Presentación Modelos
+Section 3 - Models Transitions
+Section 4 - Estilos Grid Modelos
+Section 5 - Video Explicativo Revestimientos
+Section 6 - Trabajos Terminados
+Section 7 - Contact - Page Area
+Section 8 - Politicas de Privacidad
+Section 9 - Terminos y Condiciones
+Section 10 - Blog 
+Section 11 - Control de Paginación
+Section 12 - Piedras (Donde se desarrollo primeros pasos con Bootstrap)  
+/*
+------------------- Elementos Utilizados --------------------------------
+*/
+// variable
+@import "./variable/variables";
+
+// mixin
+@import "./variable/mixin";
+
+// global
+@import "./variable/global";
+
+
+/*Al colocar una medida dentro del max-width se le indica un tope de tamaño de pantalla: entonces todas las propiedades y 
+valores que se declaren dentro de esa media solo se van a ver si están dentro de ese margen de ancho de pantalla, si no no, 
+esa seria la lógica*/
+
+/*---------------------------------------
+.Sobre Json: Es clave anotar sobre su instalación, se hace siempre antes de arrancar con SASS, es el más popular hoy y sirve para el desarrollo y la utilización de SCSS
+---------------------------------------*/
+/*****************************************/
+/*	 Section 0 - etiquetas */
+/*****************************************/
+p, ol, ul {
+    @extend %listas;
+  }
+/*****************************************/
+/*	 Section 1 - Titulo con 2 imágenes */
+/*****************************************/
+#Section1{
+    top: 10px;
+    position: relative;
+    display: inline-block;
+    border: inset 0.5px #6c7c69 ;
+    margin: 5px 150px 12px 150px;
+    padding: 10px 5px 10px 5px;
+    background-color: $colorprincipal;
+    @include box-shadow;
+}
+#Section1 img{
+    width: 55%;
+    float: right;
+    margin: 20px;
+    padding: none;
+}
+#image-text, #image-text1  {
+    display: block;
+}
+#image-text {
+	position: absolute;
+	top: 30%;
+	left: 14%;
+	font-family: 'Roboto';
+	color: nth($list: $colores, $n:1 );
+    font-size: 40px;
+	transform: translate(-30%, -30%);
+	text-align: left;
+}
+#image-text1 {
+    position: absolute;
+	top: 60%;
+	left: 11%;
+	font-family: 'Roboto';
+	color: nth($list: $colores, $n:1 );
+    font-size: 20px;
+	transform: translate(-40%, -30%);
+	text-align: left;
+}
+.banner-btn{
+    .primary-btn{
+        display: inline-block;
+        background:#ffffff;
+        transform: translate(186px, -363px);
+        @include primary-btn;
+        @include transition;
+        &:hover{
+            color: $hover-color;
+        }
+    }
+}
+#Section1-b img{
+    width: 30%;
+    float: center;
+    margin: 20px;
+    padding: none;
+    transform: translate(130%, -40%);
+}
+/*****************************************/
+/*	 Section 2 - Presentación Modelos */
+/*****************************************/
+#titulo-modelos{
+	@include titulos-secciones;   
+}
+.modelos-grid{
+    display: grid; /* Propiedad obligatoria para usar CSS grids*/
+    border: 1px solid $colorprincipal;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    min-height: 700px; 
+	font-family: 'Roboto';
+    color: nth($list: $colores, $n:1 );
+    grid-template-columns:  1fr 1fr 1fr 1fr ; /*dibujar primero las columnas de la cuadricula */ /* Es lo mismo poner: repeat (4, 1fr)*/
+    grid-template-rows: 1fr 2fr 2fr 2fr;
+    grid-template-areas: 
+        "Mod titulo titulo titulo"
+        "Mod fre mad gra"
+        "Mod hay vin nog"
+        "Mod min bl mar"
+        ;
+    column-gap: 2rem;
+    row-gap: 1rem; /* Separar filas columnas*/  
+    .primary-btn{
+            display: inline-block;
+            background:#ffffff;
+            @include primary-btn;
+            @include transition;
+            &:hover{
+                color: $hover-color;
+        }
+    } 
+}
+/*****************************************/
+/*	 Section 3 - Models Transitions */
+/*****************************************/
+#imageboxgrid{
+    transition-timing-function: ease-in-out;
+    transition: width 3s;
+    transition-delay: 1s;
+}
+.modelos-grid--fresno:hover {
+    width: 300px;
+  }
+.modelos-grid--blanco:hover {
+    width: 300px;
+  }  
+.modelos-grid--grafito:hover {
+    width: 300px;
+  }
+.modelos-grid--haya:hover {
+    width: 300px;
+  }
+.modelos-grid--madera:hover {
+    width: 300px;
+  }
+.modelos-grid--marfil:hover {
+    width: 300px;
+  }
+.modelos-grid--mina:hover {
+    width: 300px;
+  }
+.modelos-grid--nogal:hover {
+    width: 300px;
+  }
+  .modelos-grid--vintage:hover {
+    width: 300px;
+  }
+/*****************************************/
+/*	 Section 4 - Estilos Grid Modelos */
+/*****************************************/
+.modelos-grid__hijo{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    background-size: 180px;
+}
+#image-grid{
+    display: inline-block;
+	border: 1px solid rgba(0, 0, 0, .5);
+	border-radius: 5px;
+}
+.modelos-grid--titulo{
+    grid-area: titulo;
+}
+.modelos-grid--modelos{
+    padding-top: 60px;
+    background-color: $colorprincipal;
+    @include box-shadow;
+    color: nth($list: $colores, $n:1 );
+    grid-area: Mod;
+    justify-self: start;
+    display: block;
+}
+.modelos-grid--fresno{
+    grid-area: fre;
+    background-image: url("imagenes/fresno.jpg");
+    transition-timing-function: linear;
+    @include modelos-grid;}
+.modelos-grid--madera{
+    grid-area: mad;
+    background-image: url("imagenes/madera.jpg");
+    @include modelos-grid;
+    transition-timing-function: linear;}
+.modelos-grid--grafito{
+    grid-area: gra;
+    background-image: url("imagenes/grafito.jpg");
+    @include modelos-grid;
+    transition-timing-function: linear;}
+.modelos-grid--haya{
+    grid-area: hay;
+    @include modelos-grid;
+    background-image: url("imagenes/haya.jpg");
+    transition-timing-function: linear;}
+.modelos-grid--vintage{
+    grid-area: vin;
+    @include modelos-grid;
+    background-image: url("imagenes/vintage.jpg");
+    transition-timing-function: linear;}
+.modelos-grid--nogal{
+    grid-area: nog;
+    @include modelos-grid;
+    background-image: url("imagenes/nogal.jpg");
+    transition-timing-function: linear;}
+.modelos-grid--mina{
+    grid-area: min;
+    @include modelos-grid;
+    background-image: url("imagenes/mina.jpg");
+    transition-timing-function: linear;}
+.modelos-grid--blanco{
+    grid-area: bl;
+    @include modelos-grid;
+    background-image: url("imagenes/fresno.jpg");
+    transition-timing-function: linear;}
+.modelos-grid--marfil{
+    grid-area: mar;
+    @include modelos-grid;
+    background-image: url("imagenes/marfil.jpg");
+    transition-timing-function: linear;}
+    /*****************************************/
+/*	 Section 5 - Video Explicativo Revestimientos */
+/*****************************************/
+.video-area{
+    padding-top: 60px;
+    padding-bottom: 30px;
+    .titulo-video{
+        @include titulos-secciones;
+    }
+    .video{
+        margin-top: 25px;
+        text-align: center;
+
+    }        
+}
+/*****************************************/
+/*	 Section 6 - Trabajos Terminados */
+/*****************************************/
+.product-page-area{
+    padding-top: 60px;
+    padding-bottom: 30px;
+    .section-title{
+        h2{
+        @include titulos-secciones;
+    }
+    }
+      .single-product{
+        padding: 5px;
+        margin-bottom: 30px;
+        .single-product-inner{
+            box-shadow: 0 1px #FFFFFF inset, 0 1px 8px rgba(242, 242, 242, 1);
+            .product-top{
+                margin-bottom: 5px;
+            }
+            .product-img{
+                img{
+                    position: relative;
+                    animation-name: example;
+                    animation-duration: 5s;
+                    animation-delay: -1s;
+                    animation-fill-mode: fowards;
+                    @keyframes example {
+                        from {top: -1000px;}
+                        to {top: 0px;}
+                      
+                      }
+                }
+            }
+            .product-title{
+                h4{
+                    font-size: 18px;
+                    font-weight: 700;
+                    text-transform: capitalize;
+                    a{
+                        color:#404040;
+                        @include transition;
+                        &:hover{
+                            color: $hover-color;
+                        }
+                    }
+                }
+            }
+            .product-contetn{
+                p{
+                    margin-bottom: 0px;
+                    font-size: 16px;
+                    line-height: 25px;
+                    color:#828181;
+                    text-align: center;
+                }
+            }
+        }
+        }
+      }
+/*****************************************/
+/*	 Section 7 - Contact - Page Area */
+/*****************************************/
+.breadcum-area{
+    margin: 10px 5px 0px 5px;
+    background:$colorprincipal;
+    padding:130px 0 75px 0;
+    background-position:center;
+    background-size:cover;
+    .breadcum-text{
+        h2{
+            font-size: 50px;
+            font-weight: 700;
+            color:#ffffff;
+            text-transform:capitalize;
+            margin-bottom: 32px;
+        }
+        h5{
+            line-height: 28px;
+            color:#ffffff;
+            margin-bottom:0px;
+        }
+    }
+}
+.contact-page-area{
+    padding-top: 50px;
+    padding-bottom: 120px;
+    .contact-form{
+        form{
+            .form-group{
+                margin-bottom: 30px;
+                input{
+                    width: 100%;
+                    height: 60px;
+                    padding-left: 30px;
+                    background: nth($list: $colores, $n:3);
+                    border:none;
+                    box-shadow: none;
+                    @include border-radius;
+                }
+                textarea{
+                    width: 100%;
+                    height: 320px;
+                    padding: 30px;
+                    background: nth($list: $colores, $n:3);
+                    border:none;
+                    box-shadow: none;
+                    resize:none;
+                    @include border-radius;
+                }
+            }
+            .send-btn{
+                margin-top: 12px;
+                border:none;
+                box-shadow: none;
+                width: 180px;
+                height: 56px;
+                line-height: 56px;
+                text-align: center;
+                text-transform: capitalize;
+                font-size: 17px;
+                color: nth($list: $colores, $n:1);
+                @include border-radius;
+                background: $colorprincipal;
+                @include transition;
+                box-shadow: $colorprincipal;
+                &:hover{
+                    background:$hover-color;
+                    @include transform;
+                }
+            }
+        }
+    }
+}
+/*****************************************/
+/*	 Section 8 - Politicas de Privacidad */
+/*****************************************/
+.politicas{
+    margin: 30px;
+    h2{
+        font-size: 40px;
+        font-weight: 700;
+        color:nth($list: $colores, $n:2 );
+        text-transform:capitalize;
+        margin-bottom: 32px;
+        }
+    p{
+        font-size:16px;
+        line-height: 28px;
+        color:nth($list: $colores, $n:2 );
+        margin-bottom:0px;
+        }
+    
+}
+/*****************************************/
+/*	 Section 9 - Terminos y Condiciones  */
+/*****************************************/
+.terminos-y-condiciones{
+    margin: 30px;
+    h2{
+        font-size: 40px;
+        font-weight: 700;
+        color:nth($list: $colores, $n:2 );
+        text-transform:capitalize;
+        margin-bottom: 32px;
+        }
+    p{
+        font-size:16px;
+        line-height: 28px;
+        color:nth($list: $colores, $n:2 );
+        margin-bottom:0px;
+        }
+}
+/*****************************************/
+/*	 Section 10 - Blog */
+/*****************************************/
+.blog-page-area{
+    padding: 120px 0;
+    .blog-list{
+        .single-blog{
+            margin-bottom: 50px;
+            .card{
+                border:none;
+                box-shadow: 0 1px 10px rgba(119, 119, 119, .2);
+                .card-body{
+                    padding-left: 40px;
+                    padding-top: 40px;
+                    .card-title{
+                        font-size: 22px;
+                        line-height: 32px;
+                        font-weight: 700;
+                        a{
+                            color:#404040;
+                            @include transition;
+                            &:hover{
+                                color:$hover-color;
+                            }
+                        }
+                    }
+                    .card-text{
+                        margin-bottom: 15px;
+                        .blog-date{
+                            font-size: 18px;
+                            font-weight: 700;
+                            color:#0083e1;
+                        }
+                    }
+                    .card-text{
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 28px;
+                        color:#828181;
+                    }
+                }
+                img{
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                }
+            }
+        }
+    }
+}
+/*****************************************/
+/*	 Section 11 - Control de Paginación */
+/*****************************************/
+.paginacion-area{
+    margin-bottom: 20px;
+    margin-left: 30px;
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+            display: inline-block;
+            margin-right: 10px;
+            a{
+                display: block;
+                width:50px;
+                height: 50px;
+                line-height: 50px;
+                text-align:center;
+                @include border-radius;
+                background: #e2ebfb;
+                color:#404040;
+                font-weight: 700;
+                @include transition;
+                &:hover{
+                    background: linear-gradient(to right bottom, $colorprincipal, #778f72, #8cb384, #98ce8d, #a8f09a);
+                    color:nth($list: $colores, $n:1 );
+                }
+            }
+        }
+    }
+}
+
+/*****************************************/
+/*	 Section 12 - Piedras */
+/*****************************************/
+#main-row {
+    background-color: #6c7c69;
+    display: flex; 
+    flex-direction: row;  
+    justify-content: space-between;
+    align-items: center; 
+    height: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top: 2px #090a09;
+    flex-wrap: nowrap;
+}
+#header-left-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 48%;
+}
+#header-left-items{
+    font-family: sans-serif;
+    font-size: 13px;}
+#nav-enlace{
+        color: #FFFFFF;
+        text-decoration: none;
+        font-family: sans-serif;
+    }
+#header-right-list{
+        display: flex;
+        flex-direction: row;
+        width: 30%;
+        padding-right: 10px;
+        justify-content: flex-end;
+        gap: 1rem;    
+}
+#header-right-list li{
+            float: left;
+            }
+#header-right-items{
+                transition: width 5s;
+                transition: height 5s;
+          }      
+#header-right-items .hover{
+                    transform: scale(1.1, 1.1);
+            }
+#menu-piedras{
+    padding: 10px 10px 20px 10px;
+    background-color: #778f72;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+}        
+#menu-piedras a{
+    color: #FFFFFF;
+    text-decoration: none;
+}      
+.card{
+    align-items: center;
+    .card-img-overlay{
+        .primary-btn{
+            display: inline-block;
+            background:#ffffff;
+            @include primary-btn;
+            @include transition;
+            &:hover{
+                color: $hover-color;
+        }
+    } 
+}
+}
+#titulos-modelos-2{
+    @include titulos-secciones-blanco;
+    text-align: center;
+}
+>>>>>>> b9f77b69da19e76a0499e0a8dee0721eadee1978

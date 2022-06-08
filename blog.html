@@ -1,190 +1,251 @@
-<!DOCTYPE html>
-<html lang="en">
-<head rel="icono logo" href="imagenes/logo.png">>
-    <title>Blog</title>
-    <meta charset="UTF-8">
-    <style type="text/css">
-    
-header{   
-     overflow: hidden;
- }
-#top-header{       
-         text-align: center;
-         height: 100px;
-     } 
-#logo{
-    float: left;
-    padding: none; /*relleno*/ 
-    margin: none;
-    height: 60px;
-    width: 30%;
-} 
-#logo img{
-    margin-left: 15px;
-    width: 60%;
-    float: left;
-    padding: 10px 10px;
-} 
-#menu{
-	float: right;
-	width: 70%;
-	height: 100%;
-	margin: none;
-}
-	
-#menu ul{
-    font-size: 11px;
-	text-align: center;
-	float: right;
-	margin: none;
-    padding: 25px 5px 0px 0px;
-	background: #ffffff;
-}
-	
-#menu li{
-	display: inline-block;
-	padding: none;
-	margin: none;
-}	
-#menu li a, #menu li span{
-	display: inline-block;
-	padding: 0em 1.5em;
-	text-decoration: none;
-	font-weight: 600;
-	text-transform: uppercase;
-	line-height: 60px;
-}	
-#menu li a{
-	color: #6c7c69;
-}
-#menu li:hover a, #menu li span{
-	background: #FFF;
-	color: #6c7c69;
-	border-left: 1px solid #6c7c69;
-	text-decoration: none;
-}
-/*
-a:hover { background: yellow; } */ /* El usuario esta sobre el enlace */
-/*
-a:active { color: lime; }  */      /* Enlaces activos */
-
-/*****************************/
-
-
-html, body{
-    height: 100%;
-}
-     
-body{
-    margin: 0px;
-    padding: 0px;
-    background: #FFFFFF;
-    font-family: 'Roboto';
-}     
-p, ol, ul{
-    margin-top: 0;
-}
- 
-p {
-    line-height: 180%;
-}
- 
-ol, ul{
-    padding: 0;
-    list-style: none;
-}    
-.bloque3{ 
-    padding-left: 150px;  
-    margin: 0px auto;
-    width: 900px;
-    text-align: center;
-}
-/*****************************/
-
-#header-image-menu{
-    top: 10px;
-    position: relative;
-    display: inline-block;
-    border: inset 0.5px #6c7c69 ;
-    margin: 5px 150px 12px 150px;
-    padding: 10px 5px 10px 5px;
-    background-color: #6c7c69;
-}
-#header-image-menu img{
-    width: 55%;
-    float: right;
-    margin: 20px;
-    padding: none;
-}
-#image-text, #image-text1  {
-    display: block;
-}
-#image-text {
-	position: absolute;
-	top: 30%;
-	left: 14%;
-	font-family: 'Roboto';
-	color: #ffffff;
-    font-size: 40px;
-	transform: translate(-30%, -30%);
-	text-align: left;
-}
-#image-text1 {
-    position: absolute;
-	top: 60%;
-	left: 11%;
-	font-family: 'Roboto';
-	color: #ffffff;
-    font-size: 20px;
-	transform: translate(-40%, -30%);
-	text-align: left;
-}
-#header-image-menu2 img{
-    width: 30%;
-    float: center;
-    margin: 20px;
-    padding: none;
-    transform: translate(130%, -40%);
-
-}
-</style>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!DOCTYPE html> 
+<html lang="es"> 
+<head>
+    <title>Blog</title> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Notas informativas y complementarias de Bennet." content="Instructivos, trabajos terminados, colocaciones, reparaciones, consejos, ayuda, y muchos más. ¡Que nuetros profesionales te ayuden!"> 
+    <link rel="stylesheet" href="./Estilos/bootstrap/bootstrap.min.css" > 
+    <link rel="stylesheet" href="./Estilos/estilos.css" >
+    <link rel="stylesheet" href="./Estilos/css/responsive.css" >
+    <script src="https://kit.fontawesome.com/420772965a.js" crossorigin="anonymous"></script>   
 </head>
 <body>
-    <header>
-        <!-- TOP HEADER MENU -->
-        <div id="top-header">
-             
-            <!-- LOGO -->
-            <div id="logo">
-                <img src="imagenes/logo.png" />
-            </div>   
-                     
-            <!-- MENU DE NAVEGACION -->
-            <nav>
-                <div id="menu">    
-                    <ul>
-                    <li class="active"><a href="https://tiendabennet.com.ar/categoria-producto/aberturas/">Aberturas</a></li>
-                    <li class="active"><a href="https://tiendabennet.com.ar/categoria-producto/eco-deck/">Madera Plastica WPC</a></li>
-                    <li class="active"><a href="https://tiendabennet.com.ar/categoria-producto/deco-jardin/">Jardin y Exteriores</a></li>
-                    <li class="active"><a href="https://tiendabennet.com.ar/categoria-producto/revestimiento-piedras/">Piedras</a></li>
-                    <li class="active"><a href="https://tiendabennet.com.ar/categoria-producto/tabique-modular/">Tablones</a></li>
-                    <li class="active"><a href="https://tiendabennet.com.ar/categoria-producto/construccion/">Revestimientos PVC</a></li>
-                    <li class="active"><a href="micuenta.html">Mi Cuenta</a></li>
-                    <li class="active"><a href="blog.html">Blog</a></li>
-                    </ul>
-                </div>    
-            </nav>
+    <!-- Comienza Header -->
+<header class="header">
+    <ul class="header-left-list"> 
+        <li class="header-left-items"><img src="./Estilos/imagenes/logo-whatsapp.svg" width="15px" height="15px"></li>              
+        <li class="header-left-items">
+            <a class="nav-enlace" href="https://api.whatsapp.com/send?phone=541123902811&amp;text=Hola mi nombre es " target="_blank"> 
+                Venta Telefónica (+54) 11-2390-2811 | Lun a Vie 9 a 17hs, Sáb 10 a 14hs</a></li>
+        <li class="header-left-items"><img src="./Estilos/imagenes/mail-outline.svg" width="15px" height="15px"></li>        
+        <li class="header-left-items"><a class="nav-enlace" title="mail" href="infomail" target="_blank">info@tiendabennet.com.ar</a><!-- Crear HTML --> </li>       
+    </ul>
+    <ul class="header-right-list"> 
+        <li class="header-right-items">                
+            <a href="https://www.instagram.com/tiendabennet/?hl=es" target="_blank">
+                <img src="./Estilos/imagenes/logo-instagram.svg" width="20px" height="20px"></a>
+        </li>
+        <li class="header-right-items">                
+            <a href="https://www.facebook.com/tiendabennet/?notif_id=1647608054533360&notif_t=page_user_activity&ref=notif" target="_blank">
+                <img src="./Estilos/imagenes/logo-facebook.svg"  width="20px" height="20px"></a>
+        </li>
+        <li class="header-right-items">                
+            <a href="https://ar.pinterest.com/tiendabennet/_created/" target="_blank">
+                <img src="./Estilos/imagenes/logo-pinterest.svg"  width="20px" height="20px"></a>
+        </li>
+        <li class="header-right-items">                
+            <a href="https://www.youtube.com/channel/UCAFWDm0LPlKF0bkAngIM5nA" target="_blank">
+                <img src="./Estilos/imagenes/logo-youtube.svg"  width="20px" height="20px"></a>
+        </li>
+    </ul>
+</header>
+<!-- Comienza Header -->
+<!-- Comienza Menú Navegación -->         
+<nav>
+    <div id="top-nav">             
+        <div class="logo-effect" id="logo">
+          <img src="Estilos/imagenes/logo.png"/>
+         </div>   
+     <nav>
+        <div id="menu">    
+            <ul>
+                <li class="active"><a href="#" target="_blank">Aberturas</a></li>
+                <li class="active"><a href="#" target="_blank">Madera Plastica WPC</a></li>
+                <li class="active"><a href="#" target="_blank">Jardin y Exteriores</a></li>                    
+                <li class="active"><a href="piedras.html" target="_blank">Piedras</a></li>
+                <li class="active"><a href="#" target="_blank">Tablones</a></li>
+                <li class="active"><a href="index.html" target="_blank">Revestimientos PVC</a></li>
+                <li class="active"><a href="contacto.html" target="_blank">Contacto</a></li>
+                <li class="active"><a href="blog.html" target="_blank">Blog</a></li>
+            </ul>
+        </div>    
+    </nav>
+    <i class="header-icono fas fa-bars"></i>   
+    </div>
+</nav>
+<!-- Finaliza Menú Navegación -->  
+<!-- Comienza Breadcum -->
+<div class="breadcum-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcum-text text-center">
+                    <h2>Blog</h2>
+                    <h5>La información actualizada, a disposición de todos los usuarios, como recurso confiable y de utilidad para el logro de trabajos y obras eficaces.  </h5>
+                </div>
+            </div>
         </div>
-        <br>
-        <br> 
-        <hr>
-    </header>
-    <div>    
-
-
-
+    </div>
 </div>
+<!-- Finaliza Breadcum -->
+<!-- Section 9 - Blog -->
+<div class="blog-page-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-md-12">
+                <div class="blog-list"><!-- Lista cada noticia nueva que se agregue -->
+                    <div class="single-blog"><!-- Sobre cada Blog individual -->
+                        <div class="card"><!-- Tarjetas - Bootstrap - anchos y alturas iguales -->
+                          <div class="row no-gutters"><!--  Sin canaletas entre columnas en las clases de cuadrícula predefinidas -->
+                            <div class="col-md-3">
+                              <img src="Estilos/imagenes/Blog1.JPG" class="card-img img-fluid" alt="blog">
+                            </div>
+                            <div class="col-md-9">
+                              <div class="card-body"><!-- Sobre el contenido de cada tarjeta -->
+                                <h5 class="card-title"><a href="single-blog.html">Colocar una Puerta Plegable - Instructivo</a></h5>
+                                <p class="card-text"><span class="blog-date">30 de Mayo del 2020</span></p>
+                                <p class="card-text mb-0">Instructivo para colocar un puerta plegable de manera muy sencilla. Que necesitas para la instalación, como recuperar tablas dañadas y que recomendaciones le ofrecemos.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="single-blog">
+                        <div class="card">
+                          <div class="row no-gutters">
+                            <div class="col-md-3">
+                              <img src="Estilos/imagenes/Blog2.jpg" class="card-img img-fluid" alt="blog">
+                            </div>
+                            <div class="col-md-9">
+                              <div class="card-body">
+                                <h5 class="card-title"><a href="single-blog.html">Colocación de 4 Cortinas R19</a></h5>
+                                <p class="card-text"><span class="blog-date">12 de Diciembre del 2020</span></p>
+                                <p class="card-text mb-0">Trabajo realizado en el barrio de Nueva Pompeya. Un pareja de 25 años de casados. Una casa con amueblado de madera, pero que decidió cambiar por primera vez sus cortinas, de madera...</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="single-blog">
+                        <div class="card">
+                          <div class="row no-gutters">
+                            <div class="col-md-3">
+                              <img src="Estilos/imagenes/Blog3.jpg" class="card-img img-fluid" alt="blog">
+                            </div>
+                            <div class="col-md-9">
+                              <div class="card-body">
+                                <h5 class="card-title"><a href="single-blog.html">Zócalos sanitarios de 30 mm en una importante Cosmética de la Ciudad Autónoma de Buenos Aires</a></h5>
+                                <p class="card-text"><span class="blog-date">10 de Marzo del 2021</span></p>
+                                <p class="card-text mb-0">Como elegir la medida del zócalo, que consejos y que te recomendamos a la hora de decidir cuál sería la mejor opción que se adaptará a tu necesidad. </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Comienza paginacion area -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="paginacion-area">
+            <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Finaliza paginacion area -->
+<!-- Comienza Footer Area -->
+<footer class="footer-area">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-widgets">
+                        <div class="widgets-title">
+                            <h4>EMPRESA</h4>
+                        </div>
+                        <div class="widgets-text">
+                            <ul>
+                                <li><a href="#">Nosotros</a></li>
+                                <li><a href="#">Compra Mayorista</a></li>
+                                <li><a href="#">Medios de Envío</a></li>
+                                <li><a href="#">Forma de Pago</a></li>
+                                <li><a href="#">Novedades</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-widgets">
+                        <div class="widgets-title">
+                            <h4>ATENCIÓN AL CLIENTE</h4>
+                        </div>
+                        <div class="widgets-text">
+                            <ul>
+                                <li><a href="contacto.html">Contacto</a></li>
+                                <li><a href="#">Puntos de Retiro</a></li>
+                                <li><a href="contacto.html">Dejanos tu comentario</a></li>
+                                <li><a href="terminos-y-condiciones.html">Terminos y Condiciones</a></li>
+                                <li><a href="politica-de-privacidad.html">Políticas de Privacidad</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-widgets">
+                        <div class="widgets-title">
+                            <h4>CONTACTO</h4>
+                        </div>
+                        <div class="widgets-text">
+                            <ul>
+                                <li><a href="#">+ 54 9 11 64187835</a></li>
+                                <li><a href="#">Villa del Parque - CABA</a></li>
+                                <li><a href="#">Seguí tu envío</a></li>
+                                <li><a href="http://qr.afip.gob.ar/?qr=9wI1A7akFPJGt855PpS73Q,," target="_F960AFIPInfo"><img src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg" width="50"  ></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-widgets">
+                        <div class="widgets-title">
+                            <h4>REGISTRATE AL NEWSLETTER</h4>
+                        </div>
+                        <div class="widgets-text">
+                            <ul>
+                                <li><input type="text" class="form-control" id="name" name="name"  placeholder="Your Name"></li>
+                                <li><a href="#"><input type="email" class="form-control" id="email" name="email"  placeholder="Your Email "></a></li>
+                                <li><button type="submit" class="send-btn">Suscribirme</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="copyright-area">
+                        <p>BENNET &copy; <span>2020</span>; Todos los derechos reservados.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="social-media text-right">
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Finaliza Footer Area -->
+
+
+
 </body>
+<script src="js/myscript.js"></script>
 </html>

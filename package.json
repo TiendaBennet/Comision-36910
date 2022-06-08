@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+<<<<<<< HEAD
     "start": "sass style.scss ./css/Estilos/estilos.css -w --no-source-map -s compressed" 
+=======
+    "start": "sass ./Estilos/sass/estilos.scss ./Estilos/estilos.css -w --no-source-map -s compressed" 
+>>>>>>> b9f77b69da19e76a0499e0a8dee0721eadee1978
   },  
   "repository": {
     "type": "git",

@@ -1,58 +1,455 @@
-/**/
+@charset "UTF-8";
+/*
+------------- Información Inicial ----------------
 
+Nompre de la Plantilla Principal del Proyecto: Revestimientos Texturados
+WIREFRAME Y ESTRUCTURA DEL PROYECTO: https://tiendabennet.com.ar/revestimientos-texturados/
+Autor: Juan Stellatelli
+Repositories: https://github.com/TiendaBennet
+Aclaraciones: Desde el inicio de la cursada se utilizó la misma página Web, es por 
+eso que se conservan metodologías de dar estilo que quizas no sean las más eficientes 
+o adecuadas en algunos casos, pero creo que es bueno conservarlas para comparar y tener 
+como información para el futuro cuales son las mejores prácticas 
 
+------------- Contenido Total ----------------
+
+Section 1 - Titulo con 2 imágenes
+Section 2 - Presentación Modelos
+Section 3 - Models Transitions
+Section 4 - Estilos Grid Modelos
+Section 5 - Video Explicativo Revestimientos
+Section 6 - Trabajos Terminados
+Section 7 - Contact - Page Area
+Section 8 - Politicas de Privacidad
+Section 9 - Terminos y Condiciones
+Section 10 - Blog 
+Section 11 - Control de Paginación
+Section 12 - Piedras (Donde se desarrollo primeros pasos con Bootstrap)  
+/*
+------------------- Elementos Utilizados --------------------------------
+*/
+/*---------------------------------------
+Colores: 
+1) Principal - Color de Fondo para la Marca
+2) Principal Hover 
+3) Lista: Utilización solo en tienda - fin: organizar 
+---------------------------------------*/
+/*---------------------------------------
+Extends
+---------------------------------------*/
+p, ol, ul {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  /*sin los puntos*/
+}
+
+/*---------------------------------------
+Boostrap
+---------------------------------------*/
+/*---------------------------------------
+.video-area 
+---------------------------------------*/
+.video-area {
+  padding-top: 112px;
+}
+.video-area .titulo-video {
+  font-family: "Roboto";
+  color: #6c7c69;
+  font-size: 35px;
+  text-align: center;
+  letter-spacing: 4px;
+}
+.video-area .video {
+  margin-top: 25px;
+}
+
+/*---------------------------------------
+/*	 Primeras Etiquetas */
+/*---------------------------------------*/
+.html {
+  height: 100%;
+}
+
+.body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  background: #FFFFFF;
+  font-family: "Roboto";
+}
+
+p {
+  line-height: 180%;
+}
+
+h4 {
+  text-align: center;
+  padding: 1rem;
+}
+
+/*****************************************/
+/*	 Dando estilo a imagenes */
+/*****************************************/
+.image {
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.image img {
+  display: inline-block;
+  width: 100%;
+}
+
+.image-full {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 3em 0;
+}
+
+/*---------------------------------------
+.header-area 
+---------------------------------------*/
+.header {
+  display: flex;
+  /*ACTIVAR FLEX BOX */
+  flex-direction: row;
+  /*direccion hijos*/
+  justify-content: space-between;
+  /*distribuir los elementos hijos en eje principal*/
+  align-items: center;
+  /*distribuir los elementos hijos en eje secundario - para que no se estiren en el bloque/caja */
+  /*si mi direccion es row, mi eje es "x", si es column mi eje es "y"*/
+  height: 80px;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #6c7c69;
+  border-top: 2px #090a09;
+  flex-wrap: nowrap;
+  /*para que siga debajo directamente respetando su ancho o alto, según el eje principal*/
+  /*GAP : separacion entre filas y columnas que tengamos
+  Se puede hacer --> gap: 3rem 1rem;  -->separas mas las filas entre ellas y menos sus columnas, porque aca el eje principal es la fila.
+  */
+}
+.header .header-left-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 48%;
+}
+.header .header-left-list .header-left-items {
+  font-family: sans-serif;
+  font-size: 13px;
+}
+.header .header-left-list .header-left-items .nav-enlace {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+.header .header-right-list {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  padding-right: 10px;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.header .header-right-list .header-right-list li {
+  float: left;
+}
+.header .header-right-list .header-right-items {
+  transition: width 5s;
+  transition: height 5s;
+}
+.header .header-right-list .header-right-items:hover {
+  transform: scale(1.1, 1.1);
+}
+
+/*---------------------------------------
+.header-area 
+---------------------------------------*/
+/*---------------------------------------
+.nav-area 
+---------------------------------------*/
+#top-nav {
+  text-align: center;
+  height: 116px;
+  border-bottom: 1px solid #6c7c69;
+}
+
+#logo {
+  float: left;
+  padding: none;
+  /*relleno*/
+  margin: none;
+  height: 40px;
+  width: 30%;
+}
+
+#logo img {
+  margin-left: 15px;
+  width: 60%;
+  float: left;
+  padding: 0px 10px;
+}
+
+#menu li:hover {
+  transform: scale(1.5, 1.5);
+}
+
+#top-nav .header-icono {
+  display: none;
+}
+
+/*---------------------------------------
+.animacion-logo .nav-area 
+---------------------------------------*/
+.logo-effect {
+  opacity: 0;
+  animation: text-visible 0.0001s linear forwards;
+  animation-delay: 1.5s;
+}
+.logo-effect:after {
+  content: "";
+  top: 20;
+  left: 0;
+  position: absolute;
+  width: 0%;
+  height: 100px;
+  background: #FFFFFF;
+  animation: logo-effect 2s cubic-bezier(0.19, 1, 0.22, 1);
+  animation-iteration-count: 4;
+  animation-delay: 1s;
+}
+
+@keyframes logo-effect {
+  0% {
+    left: 0;
+    width: 0%;
+  }
+  50% {
+    left: 0;
+    width: 30%;
+  }
+  100% {
+    left: 30%;
+    width: 0%;
+  }
+}
+@keyframes text-visible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*---------------------------------------
+.animacion-logo .nav-area 
+---------------------------------------*/
+#menu {
+  float: right;
+  width: 70%;
+  height: 100%;
+  margin: none;
+  transition: width 3s, height 4s;
+}
+
+#menu ul {
+  font-size: 11px;
+  text-align: center;
+  float: right;
+  margin: none;
+  padding: 0px 5px 0px 0px;
+  background: #ffffff;
+}
+
+#menu li {
+  display: inline-block;
+  padding: none;
+  margin: none;
+}
+
+/*
+#menu li a, #menu li span{
+display: inline-block;
+padding: 0em 1.5em;
+text-decoration: none;
+font-weight: 600;
+text-transform: uppercase;
+line-height: 60px; 
+}	*/
+#menu li a {
+  display: inline-block;
+  padding: 0em 1.5em;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 60px;
+}
+
+#menu li span {
+  display: inline-block;
+  padding: 0em 1.5em;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 60px;
+}
+
+#menu li a {
+  color: #6c7c69;
+}
+
+#menu li:hover a, #menu li span {
+  background: #FFF;
+  color: #6c7c69;
+  border-left: 1px solid #6c7c69;
+  text-decoration: none;
+}
+
+#menu li:hover a, #menu li span {
+  background: #FFF;
+  color: #6c7c69;
+  border-left: 1px solid #6c7c69;
+  text-decoration: none;
+}
+
+/*---------------------------------------
+.nav-area 
+---------------------------------------*/
+/*
+***notas***
+a:hover { background: yellow; } */
+/* El usuario esta sobre el enlace */
+/*
+a:active { color: lime; }  */
+/* Enlaces activos */
+/*---------------------------------------
+.footer-area
+---------------------------------------*/
+.footer-area {
+  background: #6c7c69;
+}
+.footer-area .footer-top {
+  padding: 39px 10px 6px 10px;
+}
+.footer-area .footer-top .single-widgets {
+  margin-top: 30px;
+}
+.footer-area .footer-top .single-widgets .widgets-title h4 {
+  font-size: 15px;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+  text-align: left;
+}
+.footer-area .footer-top .single-widgets .widgets-text ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer-area .footer-top .single-widgets .widgets-text ul li {
+  display: block;
+}
+.footer-area .footer-top .single-widgets .widgets-text ul li a {
+  display: block;
+  font-size: 16px;
+  line-height: 36px;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  transition: width 5s;
+  transition: height 5s;
+}
+.footer-area .footer-top .single-widgets .widgets-text ul li a:hover {
+  color: #58b6e6;
+}
+.footer-area .footer-top .single-widgets .widgets-text ul li button {
+  background-color: #94C7DD;
+  color: #FFFFFF;
+  border-color: #6c7c69;
+}
+.footer-area .footer-bottom {
+  padding: 30px 0;
+}
+.footer-area .footer-bottom .copyright-area p {
+  margin-bottom: 0px;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+.footer-area .footer-bottom .copyright-area p span {
+  color: #dadee0;
+}
+.footer-area .footer-bottom .social-media ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer-area .footer-bottom .social-media ul li {
+  display: inline-block;
+}
+.footer-area .footer-bottom .social-media ul li a {
+  display: block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 50%;
+  background: #acadaf;
+  color: #FFFFFF;
+  transition: width 5s;
+  transition: height 5s;
+}
+.footer-area .footer-bottom .social-media ul li a:hover {
+  color: #FFFFFF;
+  background: #58b6e6;
+  width: 40px;
+  height: 40px;
+  display: overflow;
+}
+
+/*---------------------------------------
+.footer-area
+--------------------------------------- */
 /*Al colocar una medida dentro del max-width se le indica un tope de tamaño de pantalla: entonces todas las propiedades y 
 valores que se declaren dentro de esa media solo se van a ver si están dentro de ese margen de ancho de pantalla, si no no, 
 esa seria la lógica*/
-
-/* PADRE TOP BAR */
-.header{
-    display: flex; /*ACTIVAR FLEX BOX */
-    flex-direction: row;  /*direccion hijos*/
-    justify-content: space-between; /*distribuir los elementos hijos en eje principal*/
-    align-items: center; /*distribuir los elementos hijos en eje secundario - para que no se estiren en el bloque/caja */
-    /*si mi direccion es row, mi eje es "x", si es column mi eje es "y"*/
-    height: 80px;
-    width: 99%;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: #6c7c69;
-    border-top: 2px #090a09;
-    flex-wrap: nowrap; /*para que siga debajo directamente respetando su ancho o alto, según el eje principal*/
-    /*GAP : separacion entre filas y columnas que tengamos
-    Se puede hacer --> gap: 3rem 1rem;  -->separas mas las filas entre ellas y menos sus columnas, porque aca el eje principal es la fila.
-    */
+/*---------------------------------------
+.Sobre Json: Es clave anotar sobre su instalación, se hace siempre antes de arrancar con SASS, es el más popular hoy y sirve para el desarrollo y la utilización de SCSS
+---------------------------------------*/
+/*****************************************/
+/*	 Section 0 - etiquetas */
+/*****************************************/
+/*****************************************/
+/*	 Section 1 - Titulo con 2 imágenes */
+/*****************************************/
+#Section1 {
+  top: 10px;
+  position: relative;
+  display: inline-block;
+  border: inset 0.5px #6c7c69;
+  margin: 5px 150px 12px 150px;
+  padding: 10px 5px 10px 5px;
+  background-color: #6c7c69;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.19);
 }
 
-.nav-enlace{
-    color: #FFFFFF;
-    text-decoration: none;
-    font-family: sans-serif;
+#Section1 img {
+  width: 55%;
+  float: right;
+  margin: 20px;
+  padding: none;
 }
 
-.header-left-list{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 48%;
-}
-.header-left-items{
-    font-family: sans-serif;
-    font-size: 13px;
-}
-.header-right-list{
-    display: flex;
-    flex-direction: row;
-    width: 30%;
-    padding-right: 10px;
-    justify-content: flex-end;
-    gap: 1rem;
-}
-.header-right-list li{
-float: left;
+#image-text, #image-text1 {
+  display: block;
 }
 
+<<<<<<< HEAD
 /* FIN TOP HEADER */
 
 /*********************************************************************/
@@ -190,83 +587,60 @@ bloque3{
 #image-text, #image-text1  {
     display: block;
 }
+=======
+>>>>>>> b9f77b69da19e76a0499e0a8dee0721eadee1978
 #image-text {
-	position: absolute;
-	top: 30%;
-	left: 14%;
-	font-family: 'Roboto';
-	color: #ffffff;
-    font-size: 40px;
-	transform: translate(-30%, -30%);
-	text-align: left;
+  position: absolute;
+  top: 30%;
+  left: 14%;
+  font-family: "Roboto";
+  color: #FFFFFF;
+  font-size: 40px;
+  transform: translate(-30%, -30%);
+  text-align: left;
 }
+
 #image-text1 {
-    position: absolute;
-	top: 60%;
-	left: 11%;
-	font-family: 'Roboto';
-	color: #ffffff;
-    font-size: 20px;
-	transform: translate(-40%, -30%);
-	text-align: left;
+  position: absolute;
+  top: 60%;
+  left: 11%;
+  font-family: "Roboto";
+  color: #FFFFFF;
+  font-size: 20px;
+  transform: translate(-40%, -30%);
+  text-align: left;
 }
-#header-image-menu2 img{
-    width: 30%;
-    float: center;
-    margin: 20px;
-    padding: none;
-    transform: translate(130%, -40%);
 
+.banner-btn .primary-btn {
+  display: inline-block;
+  background: #ffffff;
+  transform: translate(186px, -363px);
+  font-size: 17px;
+  font-weight: 400;
+  border-radius: 3px;
+  color: #404040;
+  padding: 12px 35px;
+  text-transform: capitalize;
+  text-align: center;
+  transition: width 5s;
+  transition: height 5s;
 }
-/* FIN MENU NAV */
-
-/*********************************************************************/
-
-
-/*
-
-.row #column1,
-.row #column2,
-.row #column3{
-        float: left;
-        width: 320px;
-        padding: 80px 40px 80px 40px;
+.banner-btn .primary-btn:hover {
+  color: #58b6e6;
 }
-.column-title h3{
-    margin: 1em 0em;
-    font-size: 1.6em;
-    font-weight: 700;
-}
-**/
-#table {
-    position: relative;
-    display: inline-block;
-    background-color: #6c7c69;
-    opacity: 80%;
-    text-align: center;
-}
-/*
-#caja {
-    position: relative;
-    display: inline-block;
-}
-#texto1 {
-    position: absolute;
-    float: inline-start;
-    top: 10px;
-    left: 10px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 60px;
-    color: #FFFFFF;
-}
-*/
 
-
-
+#Section1-b img {
+  width: 30%;
+  float: center;
+  margin: 20px;
+  padding: none;
+  transform: translate(130%, -40%);
+}
 
 /*****************************************/
-/*	 Styling Main Content Section 3 */
+/*	 Section 2 - Presentación Modelos */
 /*****************************************/
+<<<<<<< HEAD
 
 
 .image
@@ -374,20 +748,65 @@ bloque3{
     display: inline-block;
 	border: 1px solid rgba(0, 0, 0, .5);
 	border-radius: 5px;
+=======
+#titulo-modelos {
+  font-family: "Roboto";
+  color: #6c7c69;
+  font-size: 35px;
+  text-align: center;
+  letter-spacing: 4px;
 }
 
-.modelos-grid--titulo{
-    grid-area: titulo;
+.modelos-grid {
+  display: grid;
+  /* Propiedad obligatoria para usar CSS grids*/
+  border: 1px solid #6c7c69;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  min-height: 700px;
+  font-family: "Roboto";
+  color: #FFFFFF;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /*dibujar primero las columnas de la cuadricula */
+  /* Es lo mismo poner: repeat (4, 1fr)*/
+  grid-template-rows: 1fr 2fr 2fr 2fr;
+  grid-template-areas: "Mod titulo titulo titulo" "Mod fre mad gra" "Mod hay vin nog" "Mod min bl mar";
+  column-gap: 2rem;
+  row-gap: 1rem;
+  /* Separar filas columnas*/
+}
+.modelos-grid .primary-btn {
+  display: inline-block;
+  background: #ffffff;
+  font-size: 17px;
+  font-weight: 400;
+  border-radius: 3px;
+  color: #404040;
+  padding: 12px 35px;
+  text-transform: capitalize;
+  text-align: center;
+  transition: width 5s;
+  transition: height 5s;
+}
+.modelos-grid .primary-btn:hover {
+  color: #58b6e6;
+>>>>>>> b9f77b69da19e76a0499e0a8dee0721eadee1978
 }
 
-.modelos-grid--modelos{
-    padding-top: 60px;
-    background-color: #6c7c69;
-    color: #FFFFFF;
-    grid-area: Mod;
-    justify-self: start;
-    display: block;
+/*****************************************/
+/*	 Section 3 - Models Transitions */
+/*****************************************/
+#imageboxgrid {
+  transition-timing-function: ease-in-out;
+  transition: width 3s;
+  transition-delay: 1s;
 }
+
+.modelos-grid--fresno:hover {
+  width: 300px;
+}
+<<<<<<< HEAD
 .modelos-grid--fresno{
     width: 170px;
     height: 170px;
@@ -396,63 +815,41 @@ bloque3{
     border-radius: 5px;
     border: solid 1px rgba(0, 0, 0, .5);
     transition-timing-function: linear;
+=======
+
+.modelos-grid--blanco:hover {
+  width: 300px;
+>>>>>>> b9f77b69da19e76a0499e0a8dee0721eadee1978
 }
-.modelos-grid--madera{
-    width: 170px;
-    height: 170px;
-    grid-area: mad;
-    background-image: url("imagenes/madera.jpg");
-    border-radius: 5px;
-    border: solid 1px rgba(0, 0, 0, .5);
+
+.modelos-grid--grafito:hover {
+  width: 300px;
 }
-.modelos-grid--grafito{
-    grid-area: gra;
-    width: 170px;
-    height: 170px;
-    background-image: url("imagenes/grafito.jpg");
-    border-radius: 5px;
-    border: solid 1px rgba(0, 0, 0, .5);
+
+.modelos-grid--haya:hover {
+  width: 300px;
 }
-.modelos-grid--haya{
-    grid-area: hay;
-    width: 170px;
-    height: 170px;
-    background-image: url("imagenes/haya.jpg");
-    border-radius: 5px;
-    border: solid 1px rgba(0, 0, 0, .5);
+
+.modelos-grid--madera:hover {
+  width: 300px;
 }
-.modelos-grid--vintage{
-    grid-area: vin;
-    width: 170px;
-    height: 170px;
-    background-image: url("imagenes/vintage.jpg");
-    border-radius: 5px;
-    border: solid 1px rgba(0, 0, 0, .5);
+
+.modelos-grid--marfil:hover {
+  width: 300px;
 }
-.modelos-grid--nogal{
-    grid-area: nog;
-    width: 170px;
-    height: 170px;
-    background-image: url("imagenes/nogal.jpg");
-    border-radius: 5px;
-    border: solid 1px rgba(0, 0, 0, .5);
+
+.modelos-grid--mina:hover {
+  width: 300px;
 }
-.modelos-grid--mina{
-    grid-area: min;
-    width: 170px;
-    height: 170px;
-    background-image: url("imagenes/mina.jpg");
-    border-radius: 5px;
-    border: solid 1px rgba(0, 0, 0, .5);
+
+.modelos-grid--nogal:hover {
+  width: 300px;
 }
-.modelos-grid--blanco{
-    grid-area: bl;
-    width: 170px;
-    height: 170px;
-    background-image: url("imagenes/fresno.jpg");
-    border-radius: 5px;
-    border: solid 1px rgba(0, 0, 0, .5);
+
+.modelos-grid--vintage:hover {
+  width: 300px;
 }
+<<<<<<< HEAD
 .modelos-grid--marfil{
     grid-area: mar;
     width: 170px;
@@ -514,3 +911,503 @@ bloque3{
 /*La ultima media sobreescribe la anterior*/
 /*FIN MEDIA 600 px*/
 }
+=======
+
+/*****************************************/
+/*	 Section 4 - Estilos Grid Modelos */
+/*****************************************/
+.modelos-grid__hijo {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  background-size: 180px;
+}
+
+#image-grid {
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.modelos-grid--titulo {
+  grid-area: titulo;
+}
+
+.modelos-grid--modelos {
+  padding-top: 60px;
+  background-color: #6c7c69;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.19);
+  color: #FFFFFF;
+  grid-area: Mod;
+  justify-self: start;
+  display: block;
+}
+
+.modelos-grid--fresno {
+  grid-area: fre;
+  background-image: url("imagenes/fresno.jpg");
+  transition-timing-function: linear;
+  width: 170px;
+  height: 170px;
+  border-radius: 5px;
+  border: solid 1px rgba(0, 0, 0, 0.5);
+}
+
+.modelos-grid--madera {
+  grid-area: mad;
+  background-image: url("imagenes/madera.jpg");
+  width: 170px;
+  height: 170px;
+  border-radius: 5px;
+  border: solid 1px rgba(0, 0, 0, 0.5);
+  transition-timing-function: linear;
+}
+
+.modelos-grid--grafito {
+  grid-area: gra;
+  background-image: url("imagenes/grafito.jpg");
+  width: 170px;
+  height: 170px;
+  border-radius: 5px;
+  border: solid 1px rgba(0, 0, 0, 0.5);
+  transition-timing-function: linear;
+}
+
+.modelos-grid--haya {
+  grid-area: hay;
+  width: 170px;
+  height: 170px;
+  border-radius: 5px;
+  border: solid 1px rgba(0, 0, 0, 0.5);
+  background-image: url("imagenes/haya.jpg");
+  transition-timing-function: linear;
+}
+
+.modelos-grid--vintage {
+  grid-area: vin;
+  width: 170px;
+  height: 170px;
+  border-radius: 5px;
+  border: solid 1px rgba(0, 0, 0, 0.5);
+  background-image: url("imagenes/vintage.jpg");
+  transition-timing-function: linear;
+}
+
+.modelos-grid--nogal {
+  grid-area: nog;
+  width: 170px;
+  height: 170px;
+  border-radius: 5px;
+  border: solid 1px rgba(0, 0, 0, 0.5);
+  background-image: url("imagenes/nogal.jpg");
+  transition-timing-function: linear;
+}
+
+.modelos-grid--mina {
+  grid-area: min;
+  width: 170px;
+  height: 170px;
+  border-radius: 5px;
+  border: solid 1px rgba(0, 0, 0, 0.5);
+  background-image: url("imagenes/mina.jpg");
+  transition-timing-function: linear;
+}
+
+.modelos-grid--blanco {
+  grid-area: bl;
+  width: 170px;
+  height: 170px;
+  border-radius: 5px;
+  border: solid 1px rgba(0, 0, 0, 0.5);
+  background-image: url("imagenes/fresno.jpg");
+  transition-timing-function: linear;
+}
+
+.modelos-grid--marfil {
+  grid-area: mar;
+  width: 170px;
+  height: 170px;
+  border-radius: 5px;
+  border: solid 1px rgba(0, 0, 0, 0.5);
+  background-image: url("imagenes/marfil.jpg");
+  transition-timing-function: linear;
+}
+
+/*****************************************/
+/*	 Section 5 - Video Explicativo Revestimientos */
+/*****************************************/
+.video-area {
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+.video-area .titulo-video {
+  font-family: "Roboto";
+  color: #6c7c69;
+  font-size: 35px;
+  text-align: center;
+  letter-spacing: 4px;
+}
+.video-area .video {
+  margin-top: 25px;
+  text-align: center;
+}
+
+/*****************************************/
+/*	 Section 6 - Trabajos Terminados */
+/*****************************************/
+.product-page-area {
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+.product-page-area .section-title h2 {
+  font-family: "Roboto";
+  color: #6c7c69;
+  font-size: 35px;
+  text-align: center;
+  letter-spacing: 4px;
+}
+.product-page-area .single-product {
+  padding: 5px;
+  margin-bottom: 30px;
+}
+.product-page-area .single-product .single-product-inner {
+  box-shadow: 0 1px #FFFFFF inset, 0 1px 8px rgb(242, 242, 242);
+}
+.product-page-area .single-product .single-product-inner .product-top {
+  margin-bottom: 5px;
+}
+.product-page-area .single-product .single-product-inner .product-img img {
+  position: relative;
+  animation-name: example;
+  animation-duration: 5s;
+  animation-delay: -1s;
+  animation-fill-mode: fowards;
+}
+@keyframes example {
+  from {
+    top: -1000px;
+  }
+  to {
+    top: 0px;
+  }
+}
+.product-page-area .single-product .single-product-inner .product-title h4 {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.product-page-area .single-product .single-product-inner .product-title h4 a {
+  color: #404040;
+  transition: width 5s;
+  transition: height 5s;
+}
+.product-page-area .single-product .single-product-inner .product-title h4 a:hover {
+  color: #58b6e6;
+}
+.product-page-area .single-product .single-product-inner .product-contetn p {
+  margin-bottom: 0px;
+  font-size: 16px;
+  line-height: 25px;
+  color: #828181;
+  text-align: center;
+}
+
+/*****************************************/
+/*	 Section 7 - Contact - Page Area */
+/*****************************************/
+.breadcum-area {
+  margin: 10px 5px 0px 5px;
+  background: #6c7c69;
+  padding: 130px 0 75px 0;
+  background-position: center;
+  background-size: cover;
+}
+.breadcum-area .breadcum-text h2 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 32px;
+}
+.breadcum-area .breadcum-text h5 {
+  line-height: 28px;
+  color: #ffffff;
+  margin-bottom: 0px;
+}
+
+.contact-page-area {
+  padding-top: 50px;
+  padding-bottom: 120px;
+}
+.contact-page-area .contact-form form .form-group {
+  margin-bottom: 30px;
+}
+.contact-page-area .contact-form form .form-group input {
+  width: 100%;
+  height: 60px;
+  padding-left: 30px;
+  background: #dadee0;
+  border: none;
+  box-shadow: none;
+  border-radius: 3px;
+}
+.contact-page-area .contact-form form .form-group textarea {
+  width: 100%;
+  height: 320px;
+  padding: 30px;
+  background: #dadee0;
+  border: none;
+  box-shadow: none;
+  resize: none;
+  border-radius: 3px;
+}
+.contact-page-area .contact-form form .send-btn {
+  margin-top: 12px;
+  border: none;
+  box-shadow: none;
+  width: 180px;
+  height: 56px;
+  line-height: 56px;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 17px;
+  color: #FFFFFF;
+  border-radius: 3px;
+  background: #6c7c69;
+  transition: width 5s;
+  transition: height 5s;
+  box-shadow: #6c7c69;
+}
+.contact-page-area .contact-form form .send-btn:hover {
+  background: #58b6e6;
+  transform: scale(1.3, 1.3);
+}
+
+/*****************************************/
+/*	 Section 8 - Politicas de Privacidad */
+/*****************************************/
+.politicas {
+  margin: 30px;
+}
+.politicas h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1c3d18;
+  text-transform: capitalize;
+  margin-bottom: 32px;
+}
+.politicas p {
+  font-size: 16px;
+  line-height: 28px;
+  color: #1c3d18;
+  margin-bottom: 0px;
+}
+
+/*****************************************/
+/*	 Section 9 - Terminos y Condiciones  */
+/*****************************************/
+.terminos-y-condiciones {
+  margin: 30px;
+}
+.terminos-y-condiciones h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1c3d18;
+  text-transform: capitalize;
+  margin-bottom: 32px;
+}
+.terminos-y-condiciones p {
+  font-size: 16px;
+  line-height: 28px;
+  color: #1c3d18;
+  margin-bottom: 0px;
+}
+
+/*****************************************/
+/*	 Section 10 - Blog */
+/*****************************************/
+.blog-page-area {
+  padding: 120px 0;
+}
+.blog-page-area .blog-list .single-blog {
+  margin-bottom: 50px;
+}
+.blog-page-area .blog-list .single-blog .card {
+  border: none;
+  box-shadow: 0 1px 10px rgba(119, 119, 119, 0.2);
+}
+.blog-page-area .blog-list .single-blog .card .card-body {
+  padding-left: 40px;
+  padding-top: 40px;
+}
+.blog-page-area .blog-list .single-blog .card .card-body .card-title {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 700;
+}
+.blog-page-area .blog-list .single-blog .card .card-body .card-title a {
+  color: #404040;
+  transition: width 5s;
+  transition: height 5s;
+}
+.blog-page-area .blog-list .single-blog .card .card-body .card-title a:hover {
+  color: #58b6e6;
+}
+.blog-page-area .blog-list .single-blog .card .card-body .card-text {
+  margin-bottom: 15px;
+}
+.blog-page-area .blog-list .single-blog .card .card-body .card-text .blog-date {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0083e1;
+}
+.blog-page-area .blog-list .single-blog .card .card-body .card-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #828181;
+}
+.blog-page-area .blog-list .single-blog .card img {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+/*****************************************/
+/*	 Section 11 - Control de Paginación */
+/*****************************************/
+.paginacion-area {
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+.paginacion-area ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.paginacion-area ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.paginacion-area ul li a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 3px;
+  background: #e2ebfb;
+  color: #404040;
+  font-weight: 700;
+  transition: width 5s;
+  transition: height 5s;
+}
+.paginacion-area ul li a:hover {
+  background: linear-gradient(to right bottom, #6c7c69, #778f72, #8cb384, #98ce8d, #a8f09a);
+  color: #FFFFFF;
+}
+
+/*****************************************/
+/*	 Section 12 - Piedras */
+/*****************************************/
+#main-row {
+  background-color: #6c7c69;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-top: 2px #090a09;
+  flex-wrap: nowrap;
+}
+
+#header-left-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 48%;
+}
+
+#header-left-items {
+  font-family: sans-serif;
+  font-size: 13px;
+}
+
+#nav-enlace {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+#header-right-list {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  padding-right: 10px;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+#header-right-list li {
+  float: left;
+}
+
+#header-right-items {
+  transition: width 5s;
+  transition: height 5s;
+}
+
+#header-right-items .hover {
+  transform: scale(1.1, 1.1);
+}
+
+#menu-piedras {
+  padding: 10px 10px 20px 10px;
+  background-color: #778f72;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+#menu-piedras a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.card {
+  align-items: center;
+}
+.card .card-img-overlay .primary-btn {
+  display: inline-block;
+  background: #ffffff;
+  font-size: 17px;
+  font-weight: 400;
+  border-radius: 3px;
+  color: #404040;
+  padding: 12px 35px;
+  text-transform: capitalize;
+  text-align: center;
+  transition: width 5s;
+  transition: height 5s;
+}
+.card .card-img-overlay .primary-btn:hover {
+  color: #58b6e6;
+}
+
+#titulos-modelos-2 {
+  font-family: "Roboto";
+  color: white;
+  font-size: 35px;
+  text-align: center;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=estilos.css.map */
+>>>>>>> b9f77b69da19e76a0499e0a8dee0721eadee1978
